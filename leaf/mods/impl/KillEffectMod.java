@@ -11,31 +11,31 @@ import net.minecraft.llllIIIlIlllIlIIIIIl.*;
 public class KillEffectMod extends Mod
 {
     public boolean llllIIIIlIIIlIlllIll;
-    public boolean IlIlIlIlIlllllllllIl;
-    public boolean llIllIIIIIllIlIIIIlI;
+    public boolean hideCadaver;
+    public boolean bypass;
     public String IlIIIlIlIIIllIlIlIIl;
-    public String IlIlIIIllIllIIIIIllI;
-    private int IllIIlllIIIIlllIIlIl;
+    public String effectType;
+    private int nazo;
     
     public KillEffectMod() {
         super("KillEffect", 0, 0, 0, 0, 0, 0, Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "enable")));
-        this.IllIIlllIIIIlllIIlIl = -1;
+        this.nazo = -1;
         this.llllIIIIlIIIlIlllIll = false;
         this.IlIIIlIlIIIllIlIlIIl = "";
-        this.IlIlIlIlIlllllllllIl = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "hide_cadaver"));
-        this.llIllIIIIIllIlIIIIlI = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "bypass"));
-        this.IlIlIIIllIllIIIIIllI = Leaf.instance.saveConfig.loadConfig("KillEffect", "effect");
+        this.hideCadaver = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "hide_cadaver"));
+        this.bypass = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "bypass"));
+        this.effectType = Leaf.instance.saveConfig.loadConfig("KillEffect", "effect");
     }
     
     public void llllIIIIlIIIlIlllIll(final lllIIIIlllllIlIIllIl lllIIIIlllllIlIIllIl) {
         if (!this.IlIlIlIlIlllllllllIl(lllIIIIlllllIlIIllIl)) {
             return;
         }
-        if (this.IlIlIlIlIlllllllllIl) {
+        if (this.hideCadaver) {
             Minecraft.getMinecraft().IIIlIIIlIlIIlllIIlll().llllIIIIlIIIlIlllIll(new IIIlIIIlIlIIlllIIlll(new int[] { lllIIIIlllllIlIIllIl.IlllIIIIlIIIlIlIlIIl() }));
         }
-        final String ilIlIIIllIllIIIIIllI;
-        switch (ilIlIIIllIllIIIIIllI = this.IlIlIIIllIllIIIIIllI) {
+        final String effectType;
+        switch (effectType = this.effectType) {
             case "EXPLOSION": {
                 Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.IlllllllIIIlIIIlIlII.llllIIIIlIIIlIlllIll(IlIllllIIlIIlIlIlIll.llIllIIIIIllIlIIIIlI, lllIIIIlllllIlIIllIl.IIlllIlIIllIlIlIlIIl, lllIIIIlllllIlIIllIl.llIIIlIlIllIIlIlIlII, lllIIIIlllllIlIIllIl.lllllIlIIIlIlIIlllII, 0.0, 0.0, 0.0, new int[0]);
                 Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll("random.explode", 1.0f, 1.0f);
@@ -62,8 +62,8 @@ public class KillEffectMod extends Mod
     
     public void llllIIIIlIIIlIlllIll(final llIllIIIIIllIlIIIIlI llIllIIIIIllIlIIIIlI) {
         if (this.IlIIIlIlIIIllIlIlIIl.equals(llIllIIIIIllIlIIIIlI.s_())) {
-            final String ilIlIIIllIllIIIIIllI;
-            switch (ilIlIIIllIllIIIIIllI = this.IlIlIIIllIllIIIIIllI) {
+            final String effectType;
+            switch (effectType = this.effectType) {
                 case "EXPLOSION": {
                     Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.IlllllllIIIlIIIlIlII.llllIIIIlIIIlIlllIll(IlIllllIIlIIlIlIlIll.llIllIIIIIllIlIIIIlI, llIllIIIIIllIlIIIIlI.IIlllIlIIllIlIlIlIIl, llIllIIIIIllIlIIIIlI.llIIIlIlIllIIlIlIlII, llIllIIIIIllIlIIIIlI.lllllIlIIIlIlIIlllII, 0.0, 0.0, 0.0, new int[0]);
                     Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll("random.explode", 1.0f, 1.0f);

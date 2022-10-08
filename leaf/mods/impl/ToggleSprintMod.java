@@ -7,14 +7,14 @@ import net.minecraft.client.*;
 
 public class ToggleSprintMod extends Mod
 {
-    public boolean llllIIIIlIIIlIlllIll;
-    public boolean IlIlIlIlIlllllllllIl;
+    public boolean speedup;
+    public boolean sneak;
     private boolean llIllIIIIIllIlIIIIlI;
     
     public ToggleSprintMod() {
         super("ToggleSprint", Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "x")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "y")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "red")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "green")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "blue")), Integer.valueOf(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "size")), Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "enable")));
-        this.llllIIIIlIIIlIlllIll = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "speedup"));
-        this.IlIlIlIlIlllllllllIl = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "sneak"));
+        this.speedup = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "speedup"));
+        this.sneak = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ToggleSprint", "sneak"));
         this.llIllIIIIIllIlIIIIlI = false;
     }
     
@@ -55,7 +55,7 @@ public class ToggleSprintMod extends Mod
     }
     
     public boolean IIIIlllIIIIIIlIIIlll() {
-        if (!this.IlIlIlIlIlllllllllIl) {
+        if (!this.sneak) {
             return Minecraft.getMinecraft().IIIlIIIlIlIIlllIIlll.IlIIllIIllIIllIIlIIl.IlIIIlIlIIIllIlIlIIl();
         }
         if (!this.llIllIIIIIllIlIIIIlI) {

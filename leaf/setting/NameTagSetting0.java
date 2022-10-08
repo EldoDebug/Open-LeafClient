@@ -15,6 +15,6 @@ class NameTagSetting0 extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("NameTag", "background", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.llIllIlIIIIllIlIIllI.IlIlIlIlIlllllllllIl = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.llIllIlIIIIllIlIIllI.background = this.llllIIIIlIIIlIlllIll;
     }
 }

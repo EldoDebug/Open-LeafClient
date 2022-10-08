@@ -11,11 +11,11 @@ import java.util.*;
 
 public class ScoreBoardMod extends Mod
 {
-    public boolean llllIIIIlIIIlIlllIll;
+    public boolean number;
     
     public ScoreBoardMod() {
         super("ScoreBoard", Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "x")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "y")), 0, 0, 0, Integer.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "size")), Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "enable")));
-        this.llllIIIIlIIIlIlllIll = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "number"));
+        this.number = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "number"));
     }
     
     @Override
@@ -71,7 +71,7 @@ public class ScoreBoardMod extends Mod
                 final int n7 = n2 - n3 * ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll;
                 net.minecraft.client.llIllIIIIIllIlIIIIlI.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl2 - 2, n7, n4, n7 + ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll, 1342177280);
                 ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll3, ilIIIlIlIIIllIlIlIIl2, n7, 553648127);
-                if (!this.llllIIIIlIIIlIlllIll) {
+                if (!this.number) {
                     final String string = new StringBuilder().append(IlllIIIIlIIIlIlIlIIl.IlIlIIIllIIllIlllllI).append(ilIIIlIlIIIllIlIlIIl3.IlIlIlIlIlllllllllIl()).toString();
                     ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(string, n4 - ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(string), n7, 553648127);
                 }

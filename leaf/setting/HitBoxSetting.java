@@ -15,6 +15,6 @@ class HitBoxSetting extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("HitBox", "look_direction", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.lIIIIlIIIIIlllIllIII.lookDirection = this.llllIIIIlIIIlIlllIll;
     }
 }

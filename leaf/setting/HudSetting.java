@@ -33,56 +33,56 @@ public class HudSetting extends lIIllIIIllllIlllIllI
             return;
         }
         if (ilIlIlIlIlllllllllIl.equals("ToggleSprint")) {
-            this.IllIIlllIIIIlllIIlIl.add(new ToggleSprintSetting0(this, "Enable Toggle Sneak", 1120, 650, 100, 60, Leaf.instance.modManager.IlIlIlIlIlllllllllIl.IlIlIlIlIlllllllllIl));
-            this.IllIIlllIIIIlllIIlIl.add(new ToggleSprintSetting1(this, "Enable Flying Boost", 1120, 750, 100, 60, Leaf.instance.modManager.IlIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll));
+            this.IllIIlllIIIIlllIIlIl.add(new ToggleSprintSetting0(this, "Enable Toggle Sneak", 1120, 650, 100, 60, Leaf.instance.modManager.IlIlIlIlIlllllllllIl.sneak));
+            this.IllIIlllIIIIlllIIlIl.add(new ToggleSprintSetting1(this, "Enable Flying Boost", 1120, 750, 100, 60, Leaf.instance.modManager.IlIlIlIlIlllllllllIl.speedup));
         }
         else if (ilIlIlIlIlllllllllIl.equals("CPS")) {
             this.IllIIlllIIIIlllIIlIl.add(new CPSSetting(this, "Enable Right Click CPS", 1120, 650, 100, 60, Leaf.instance.modManager.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll));
         }
         else {
             if (ilIlIlIlIlllllllllIl.equals("KillEffect")) {
-                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting2(this, "Type of Effects", 920, 250, 300, 90, Arrays.asList("NONE", "BLOOD", "LIGHTNING", "EXPLOSION"), Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.IlIlIIIllIllIIIIIllI));
-                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting1(this, "Animation of Hiding Corpse", 1120, 380, 100, 60, Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.IlIlIlIlIlllllllllIl));
-                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting0(this, "Enable Hypixel Mode", 1120, 480, 100, 60, Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.llIllIIIIIllIlIIIIlI));
+                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting2(this, "Type of Effects", 920, 250, 300, 90, Arrays.asList("NONE", "BLOOD", "LIGHTNING", "EXPLOSION"), Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.effectType));
+                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting1(this, "Animation of Hiding Corpse", 1120, 380, 100, 60, Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.hideCadaver));
+                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting0(this, "Enable Hypixel Mode", 1120, 480, 100, 60, Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.bypass));
                 return;
             }
             if (ilIlIlIlIlllllllllIl.equals("PotionStatus")) {
-                this.IllIIlllIIIIlllIIlIl.add(new PotionStatusSetting(this, "Show Background", 1120, 650, 100, 60, Leaf.instance.modManager.IlIlIIIllIllIIIIIllI.llllIIIIlIIIlIlllIll));
+                this.IllIIlllIIIIlllIIlIl.add(new PotionStatusSetting(this, "Show Background", 1120, 650, 100, 60, Leaf.instance.modManager.IlIlIIIllIllIIIIIllI.background));
             }
             else {
                 if (ilIlIlIlIlllllllllIl.equals("NickHider")) {
-                    this.IllIIlllIIIIlllIIlIl.add(new NickHiderSetting(this, "Nick Other Players", 1120, 250, 100, 60, Leaf.instance.modManager.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll));
+                    this.IllIIlllIIIIlllIIlIl.add(new NickHiderSetting(this, "Nick Other Players", 1120, 250, 100, 60, Leaf.instance.modManager.IllIIlllIIIIlllIIlIl.nickOther));
                     return;
                 }
                 if (ilIlIlIlIlllllllllIl.equals("HitBox")) {
                     this.IllIIlllIIIIlllIIlIl.add(new IIIllllllIllIIIlllIl(this, "Red Color of HUD", 960, 250, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getRed(), 0));
                     this.IllIIlllIIIIlllIIlIl.add(new lIIIIlIIIIIlllIllIII(this, "Green Color of HUD", 960, 350, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getGreen(), 0));
                     this.IllIIlllIIIIlllIIlIl.add(new lIIIlllIIIllIIIllIII(this, "Blue Color of HUD", 960, 450, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getBlue(), 0));
-                    this.IllIIlllIIIIlllIIlIl.add(new HitBoxSetting(this, "Show Player's Direction", 1120, 550, 100, 60, Leaf.instance.modManager.lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll));
+                    this.IllIIlllIIIIlllIIlIl.add(new HitBoxSetting(this, "Show Player's Direction", 1120, 550, 100, 60, Leaf.instance.modManager.lIIIIlIIIIIlllIllIII.lookDirection));
                     return;
                 }
                 if (ilIlIlIlIlllllllllIl.equals("ScoreBoard")) {
                     this.IllIIlllIIIIlllIIlIl.add(new HudSizeSetting(this, "Size of HUD", 960, 250, 255, 90, this.IlIlIIIllIllIIIIIllI.llIIlIIIlIIIllIlIIIl(), 0));
-                    this.IllIIlllIIIIlllIIlIl.add(new ScoreBoardSetting(this, "Hide Number of Lines", 1120, 350, 100, 60, Leaf.instance.modManager.llIIlIIIlIIIllIlIIIl.llllIIIIlIIIlIlllIll));
+                    this.IllIIlllIIIIlllIIlIl.add(new ScoreBoardSetting(this, "Hide Number of Lines", 1120, 350, 100, 60, Leaf.instance.modManager.llIIlIIIlIIIllIlIIIl.number));
                     return;
                 }
                 if (ilIlIlIlIlllllllllIl.equals("NameTag")) {
-                    this.IllIIlllIIIIlllIIlIl.add(new NameTagSetting1(this, "Add Shadow Effects", 1120, 250, 100, 60, Leaf.instance.modManager.llIllIlIIIIllIlIIllI.llllIIIIlIIIlIlllIll));
-                    this.IllIIlllIIIIlllIIlIl.add(new NameTagSetting0(this, "Hide NameTag Background", 1120, 350, 100, 60, Leaf.instance.modManager.llIllIlIIIIllIlIIllI.IlIlIlIlIlllllllllIl));
+                    this.IllIIlllIIIIlllIIlIl.add(new NameTagSetting1(this, "Add Shadow Effects", 1120, 250, 100, 60, Leaf.instance.modManager.llIllIlIIIIllIlIIllI.shadow));
+                    this.IllIIlllIIIIlllIIlIl.add(new NameTagSetting0(this, "Hide NameTag Background", 1120, 350, 100, 60, Leaf.instance.modManager.llIllIlIIIIllIlIIllI.background));
                     return;
                 }
                 if (ilIlIlIlIlllllllllIl.equals("Chat")) {
                     this.IllIIlllIIIIlllIIlIl.add(new llllIIllllIlIlIIIIll(this, "Red Color of Detected Chat", 960, 250, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getRed(), 40));
                     this.IllIIlllIIIIlllIIlIl.add(new HudGreenSetting(this, "Green Color of Detected Chat", 960, 350, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getGreen(), 40));
                     this.IllIIlllIIIIlllIIlIl.add(new IIlllIIlIllIllIlIIll(this, "Blue Color of Detected Chat", 960, 450, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getBlue(), 40));
-                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting2(this, "Detect Your Name", 1120, 550, 100, 60, Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll));
-                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting1(this, "Hide Chat Background", 1120, 650, 100, 60, Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.IlIlIlIlIlllllllllIl));
-                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting0(this, "Block Access to Chat", 1120, 750, 100, 60, Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.llIllIIIIIllIlIIIIlI));
+                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting2(this, "Detect Your Name", 1120, 550, 100, 60, Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.detect));
+                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting1(this, "Hide Chat Background", 1120, 650, 100, 60, Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.background));
+                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting0(this, "Block Access to Chat", 1120, 750, 100, 60, Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.access));
                     return;
                 }
                 if (ilIlIlIlIlllllllllIl.equals("Coordinate")) {
-                    this.IllIIlllIIIIlllIIlIl.add(new CoordinateSetting0(this, "Hide the Biome", 1120, 650, 100, 60, Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.llllIIIIlIIIlIlllIll));
-                    this.IllIIlllIIIIlllIIlIl.add(new CoordinateSetting1(this, "Enable Decimal Format", 1120, 750, 100, 60, Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.IlIlIlIlIlllllllllIl));
+                    this.IllIIlllIIIIlllIIlIl.add(new CoordinateSetting0(this, "Hide the Biome", 1120, 650, 100, 60, Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.biome));
+                    this.IllIIlllIIIIlllIIlIl.add(new CoordinateSetting1(this, "Enable Decimal Format", 1120, 750, 100, 60, Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.decimal));
                 }
                 else if (ilIlIlIlIlllllllllIl.equals("BossBar")) {
                     this.IllIIlllIIIIlllIIlIl.add(new BossBarSetting(this, "Hide Health Bar", 1120, 650, 100, 60, Leaf.instance.modManager.llllIIllllIlIlIIIIll.llllIIIIlIIIlIlllIll));

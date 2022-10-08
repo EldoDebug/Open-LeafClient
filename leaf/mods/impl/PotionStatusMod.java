@@ -12,11 +12,11 @@ import java.util.*;
 
 public class PotionStatusMod extends Mod
 {
-    public boolean llllIIIIlIIIlIlllIll;
+    public boolean background;
     
     public PotionStatusMod() {
         super("PotionStatus", Integer.parseInt(Leaf.instance.saveConfig.loadConfig("PotionStatus", "x")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("PotionStatus", "y")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("PotionStatus", "red")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("PotionStatus", "green")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("PotionStatus", "blue")), Integer.valueOf(Leaf.instance.saveConfig.loadConfig("PotionStatus", "size")), Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("PotionStatus", "enable")));
-        this.llllIIIIlIIIlIlllIll = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("PotionStatus", "background"));
+        this.background = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("PotionStatus", "background"));
     }
     
     @Override
@@ -34,7 +34,7 @@ public class PotionStatusMod extends Mod
                 final llllIIIIlIIIlIlllIll llllIIIIlIIIlIlllIll = net.minecraft.llllIIllllIlIlIIIIll.llllIIIIlIIIlIlllIll.llllIIIIlIIIlIlllIll[ilIIIlIlIIIllIlIlIIl2.llllIIIIlIIIlIlllIll()];
                 lllllIlIIIlIlIIlllII.llIllIIIIIllIlIIIIlI(1.0f, 1.0f, 1.0f, 1.0f);
                 Minecraft.getMinecraft().lllIllIIIllllllIllll().llllIIIIlIIIlIlllIll(new lIllllIllIllIIllllll("textures/gui/container/inventory.png"));
-                if (this.llllIIIIlIIIlIlllIll) {
+                if (this.background) {
                     Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.IlIlIlIlIlllllllllIl(ilIIIlIlIIIllIlIlIIl, ilIlIIIllIllIIIIIllI, 0, 166, 140, 32);
                 }
                 if (llllIIIIlIIIlIlllIll.IlIlIIIllIllIIIIIllI()) {

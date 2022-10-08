@@ -15,6 +15,6 @@ class ToggleSprintSetting0 extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("ToggleSprint", "sneak", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlIlIlIlIlllllllllIl.IlIlIlIlIlllllllllIl = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.IlIlIlIlIlllllllllIl.sneak = this.llllIIIIlIIIlIlllIll;
     }
 }

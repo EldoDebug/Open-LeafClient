@@ -5,12 +5,12 @@ import leaf.*;
 
 public class NameTagMod extends Mod
 {
-    public boolean llllIIIIlIIIlIlllIll;
-    public boolean IlIlIlIlIlllllllllIl;
+    public boolean shadow;
+    public boolean background;
     
     public NameTagMod() {
         super("NameTag", 0, 0, 0, 0, 0, 0, Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("NameTag", "enable")));
-        this.llllIIIIlIIIlIlllIll = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("NameTag", "shadow"));
-        this.IlIlIlIlIlllllllllIl = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("NameTag", "background"));
+        this.shadow = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("NameTag", "shadow"));
+        this.background = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("NameTag", "background"));
     }
 }
