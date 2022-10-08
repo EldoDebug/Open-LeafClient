@@ -15,6 +15,6 @@ class ScoreBoardSetting extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("ScoreBoard", "number", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.llIIlIIIlIIIllIlIIIl.number = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.llIIlIIIlIIIllIlIIIl.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
     }
 }

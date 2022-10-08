@@ -15,6 +15,6 @@ class NickHiderSetting extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("NickHider", "nick_others", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IllIIlllIIIIlllIIlIl.nickOther = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
     }
 }

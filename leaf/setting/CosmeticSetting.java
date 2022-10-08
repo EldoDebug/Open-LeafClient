@@ -19,6 +19,7 @@ public class CosmeticSetting extends lIIllIIIllllIlllIllI
     private ArrayList llllIIIlIlllIlIIIIIl;
     private IlIlIIIllIllIIIIIllI lIIIIlIIIIIlllIllIII;
     
+    @Override
     public void n_() {
         final g g = new g(this.IlIlIIIllIIllIlllllI);
         final int n = (int)Toolkit.getDefaultToolkit().getScreenSize().getWidth();
@@ -57,13 +58,14 @@ public class CosmeticSetting extends lIIllIIIllllIlllIllI
         this.lIIIIlIIIIIlllIllIII = new IlIlIIIllIllIIIIIllI(this.llllIIIlIlllIlIIIIIl, 945, 400, 32, 400, 8);
     }
     
+    @Override
     public void llllIIIIlIIIlIlllIll(final int n, final int n2, final float n3) {
         final g g = new g(this.IlIlIIIllIIllIlllllI);
         final int llllIIIIlIIIlIlllIll = g.llllIIIIlIIIlIlllIll();
         final int ilIlIlIlIlllllllllIl = g.IlIlIlIlIlllllllllIl();
         lllllIlIIIlIlIIlllII.lIlIlIIIllIIllIIIllI();
         this.IlIlIIIllIIllIlllllI.lllIllIIIllllllIllll().llllIIIIlIIIlIlllIll(new lIllllIllIllIIllllll("client/main.png"));
-        llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(0, 0, 0.0f, 0.0f, llllIIIIlIIIlIlllIll, ilIlIlIlIlllllllllIl, (float)llllIIIIlIIIlIlllIll, (float)ilIlIlIlIlllllllllIl);
+        net.minecraft.client.llIllIIIIIllIlIIIIlI.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(0, 0, 0.0f, 0.0f, llllIIIIlIIIlIlllIll, ilIlIlIlIlllllllllIl, (float)llllIIIIlIIIlIlllIll, (float)ilIlIlIlIlllllllllIl);
         final Iterator<llllIIIlIlllIlIIIIIl> iterator = this.IlIlIIIllIllIIIIIllI.iterator();
         while (iterator.hasNext()) {
             iterator.next().IlIlIlIlIlllllllllIl();
@@ -74,6 +76,7 @@ public class CosmeticSetting extends lIIllIIIllllIlllIllI
         this.lIIIIlIIIIIlllIllIII.IlIlIlIlIlllllllllIl();
     }
     
+    @Override
     protected void llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3) {
         final Iterator<llllIIIlIlllIlIIIIIl> iterator = this.IlIlIIIllIllIIIIIllI.iterator();
         while (iterator.hasNext()) {
@@ -84,6 +87,7 @@ public class CosmeticSetting extends lIIllIIIllllIlllIllI
         }
     }
     
+    @Override
     public void llllIIIIlIIIlIlllIll(final Minecraft minecraft, final int n, final int n2) {
         this.IlIlIIIllIllIIIIIllI = new ArrayList();
         this.IllIIlllIIIIlllIIlIl = new ArrayList();
@@ -91,6 +95,7 @@ public class CosmeticSetting extends lIIllIIIllllIlllIllI
         super.llllIIIIlIIIlIlllIll(minecraft, n, n2);
     }
     
+    @Override
     public void IlIlIlIlIlllllllllIl() {
         super.IlIlIlIlIlllllllllIl();
         final int eventDWheel = Mouse.getEventDWheel();
@@ -115,6 +120,7 @@ public class CosmeticSetting extends lIIllIIIllllIlllIllI
         }
     }
     
+    @Override
     public void o_() {
         this.IlIlIIIllIIllIlllllI.IIIIlllIIIIIIlIIIlll = null;
     }

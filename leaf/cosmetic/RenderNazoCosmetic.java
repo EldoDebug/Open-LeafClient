@@ -17,6 +17,7 @@ class RenderNazoCosmetic extends IlIIIlIlIIIllIlIlIIl
         this.llllIIIIlIIIlIlllIll = llllIIIIlIIIlIlllIll;
     }
     
+    @Override
     public void llllIIIIlIIIlIlllIll(final llIllIIIIIllIlIIIIlI llIllIIIIIllIlIIIIlI, final float n, final float n2, final float n3, final float n4, final float n5, final float n6) {
         if (llIllIIIIIllIlIIIIlI.IIIIIIIllllIlIIIIIII()) {
             return;
@@ -27,9 +28,9 @@ class RenderNazoCosmetic extends IlIIIlIlIIIllIlIlIIl
         Minecraft.getMinecraft().lllIllIIIllllllIllll().llllIIIIlIIIlIlllIll(llIllIlIIIIllIlIIllI);
         this.llllIIIIlIIIlIlllIll.llIllIIIIIllIlIIIIlI.lIIIlllIIIllIIIllIII = Integer.parseInt(list.get(0));
         this.llllIIIIlIIIlIlllIll.llIllIIIIIllIlIIIIlI.llIIlIIIlIIIllIlIIIl = Integer.parseInt(list.get(0));
-        Cosmetic.llllIIIIlIIIlIlllIll(this.llllIIIIlIIIlIlllIll, new IIlIIIIIllIlIIIlIIll((IlIIIlIlIIIllIlIlIIl)this.llllIIIIlIIIlIlllIll.llIllIIIIIllIlIIIIlI, 0, 0));
+        Cosmetic.llllIIIIlIIIlIlllIll(this.llllIIIIlIIIlIlllIll, new IIlIIIIIllIlIIIlIIll(this.llllIIIIlIIIlIlllIll.llIllIIIIIllIlIIIIlI, 0, 0));
         this.llllIIIIlIIIlIlllIll.llllIIIIlIIIlIlllIll.llllIIIIlIIIlIlllIll(Float.parseFloat(list.get(1)), Float.parseFloat(list.get(2)), Float.parseFloat(list.get(3)), Integer.parseInt(list.get(4)), Integer.parseInt(list.get(5)), Integer.parseInt(list.get(6)));
-        Cosmetic.IlIlIlIlIlllllllllIl(this.llllIIIIlIIIlIlllIll, new IIlIIIIIllIlIIIlIIll((IlIIIlIlIIIllIlIlIIl)this.llllIIIIlIIIlIlllIll.llIllIIIIIllIlIIIIlI, 0, Integer.parseInt(list.get(7))));
+        Cosmetic.IlIlIlIlIlllllllllIl(this.llllIIIIlIIIlIlllIll, new IIlIIIIIllIlIIIlIIll(this.llllIIIIlIIIlIlllIll.llIllIIIIIllIlIIIIlI, 0, Integer.parseInt(list.get(7))));
         this.llllIIIIlIIIlIlllIll.IlIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(Float.parseFloat(list.get(8)), Float.parseFloat(list.get(9)), Float.parseFloat(list.get(10)), Integer.parseInt(list.get(11)), Integer.parseInt(list.get(12)), Integer.parseInt(list.get(13)));
         if (llIllIIIIIllIlIIIIlI.IIIIIllIIIIlIIIIllIl()) {
             GL11.glTranslated(0.0, 0.225, 0.0);

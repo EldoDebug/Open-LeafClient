@@ -15,6 +15,6 @@ class CoordinateSetting1 extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("Coordinate", "decimal", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.decimal = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.IlIlIlIlIlllllllllIl = this.llllIIIIlIIIlIlllIll;
     }
 }

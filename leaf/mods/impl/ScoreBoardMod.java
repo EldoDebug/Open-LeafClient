@@ -11,11 +11,11 @@ import java.util.*;
 
 public class ScoreBoardMod extends Mod
 {
-    public boolean number;
+    public boolean llllIIIIlIIIlIlllIll;
     
     public ScoreBoardMod() {
         super("ScoreBoard", Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "x")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "y")), 0, 0, 0, Integer.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "size")), Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "enable")));
-        this.number = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "number"));
+        this.llllIIIIlIIIlIlllIll = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "number"));
     }
     
     @Override
@@ -53,7 +53,7 @@ public class ScoreBoardMod extends Mod
         if (llllIIIIlIIIlIlllIll2.size() <= 15) {
             int n = ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(liiiIlIIIIIlllIllIII.IlIIIlIlIIIllIlIlIIl());
             for (final IlIIIlIlIIIllIlIlIIl ilIIIlIlIIIllIlIlIIl : llllIIIIlIIIlIlllIll2) {
-                n = Math.max(n, ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(String.valueOf(net.minecraft.lllIIIIlllllIlIIllIl.lIIIlllIIIllIIIllIII.llllIIIIlIIIlIlllIll((IlIlIIIllIIllIlllllI)llllIIIIlIIIlIlllIll.IllIIlllIIIIlllIIlIl(ilIIIlIlIIIllIlIlIIl.IlIIIlIlIIIllIlIlIIl()), ilIIIlIlIIIllIlIlIIl.IlIIIlIlIIIllIlIlIIl())) + ": " + IlllIIIIlIIIlIlIlIIl.IlIlIIIllIIllIlllllI + ilIIIlIlIIIllIlIlIIl.IlIlIlIlIlllllllllIl()));
+                n = Math.max(n, ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(String.valueOf(net.minecraft.lllIIIIlllllIlIIllIl.lIIIlllIIIllIIIllIII.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll.IllIIlllIIIIlllIIlIl(ilIIIlIlIIIllIlIlIIl.IlIIIlIlIIIllIlIlIIl()), ilIIIlIlIIIllIlIlIIl.IlIIIlIlIIIllIlIlIIl())) + ": " + IlllIIIIlIIIlIlIlIIl.IlIlIIIllIIllIlllllI + ilIIIlIlIIIllIlIlIIl.IlIlIlIlIlllllllllIl()));
             }
             final int n2 = this.IlIlIIIllIllIIIIIllI() + (llllIIIIlIIIlIlllIll2.size() + 1) * ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll;
             int ilIIIlIlIIIllIlIlIIl2 = this.IlIIIlIlIIIllIlIlIIl();
@@ -67,11 +67,11 @@ public class ScoreBoardMod extends Mod
             }
             for (final IlIIIlIlIIIllIlIlIIl ilIIIlIlIIIllIlIlIIl3 : llllIIIIlIIIlIlllIll2) {
                 ++n3;
-                final String llllIIIIlIIIlIlllIll3 = net.minecraft.lllIIIIlllllIlIIllIl.lIIIlllIIIllIIIllIII.llllIIIIlIIIlIlllIll((IlIlIIIllIIllIlllllI)llllIIIIlIIIlIlllIll.IllIIlllIIIIlllIIlIl(ilIIIlIlIIIllIlIlIIl3.IlIIIlIlIIIllIlIlIIl()), ilIIIlIlIIIllIlIlIIl3.IlIIIlIlIIIllIlIlIIl());
+                final String llllIIIIlIIIlIlllIll3 = net.minecraft.lllIIIIlllllIlIIllIl.lIIIlllIIIllIIIllIII.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll.IllIIlllIIIIlllIIlIl(ilIIIlIlIIIllIlIlIIl3.IlIIIlIlIIIllIlIlIIl()), ilIIIlIlIIIllIlIlIIl3.IlIIIlIlIIIllIlIlIIl());
                 final int n7 = n2 - n3 * ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll;
                 net.minecraft.client.llIllIIIIIllIlIIIIlI.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl2 - 2, n7, n4, n7 + ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll, 1342177280);
                 ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll3, ilIIIlIlIIIllIlIlIIl2, n7, 553648127);
-                if (!this.number) {
+                if (!this.llllIIIIlIIIlIlllIll) {
                     final String string = new StringBuilder().append(IlllIIIIlIIIlIlIlIIl.IlIlIIIllIIllIlllllI).append(ilIIIlIlIIIllIlIlIIl3.IlIlIlIlIlllllllllIl()).toString();
                     ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(string, n4 - ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(string), n7, 553648127);
                 }

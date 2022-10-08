@@ -15,6 +15,6 @@ class KillEffectSetting1 extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("KillEffect", "hide_cadaver", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.hideCadaver = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.IlIlIlIlIlllllllllIl = this.llllIIIIlIIIlIlllIll;
     }
 }

@@ -11,6 +11,7 @@ class DiscordCallback implements ReadyCallback
         this.instance = instance;
     }
     
+    @Override
     public void apply(final DiscordUser discordUser) {
         this.instance.setDiscordStatus();
     }

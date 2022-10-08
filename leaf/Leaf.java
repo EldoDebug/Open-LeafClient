@@ -33,26 +33,26 @@ public class Leaf
         DiscordRPC.discordShutdown();
     }
     
-    public void loginAccount(final String s, final String s2) {
+    public void loginAccount(final String email, final String password) {
         final MicrosoftAuthenticator microsoftAuthenticator = new MicrosoftAuthenticator();
         try {
-            final MicrosoftAuthResult loginWithCredentials = microsoftAuthenticator.loginWithCredentials(s, s2);
+            final MicrosoftAuthResult loginWithCredentials = microsoftAuthenticator.loginWithCredentials(email, password);
             Minecraft.getMinecraft().session = new Session(loginWithCredentials.getProfile().getName(), loginWithCredentials.getProfile().getId(), loginWithCredentials.getAccessToken(), "legacy");
         }
         catch (MicrosoftAuthenticationException ex) {}
     }
     
-    public void startDiscord(final String s) {
+    public void startDiscord(final String applicationId) {
         this.lastCurrentTimeMillis = System.currentTimeMillis();
-        DiscordRPC.discordInitialize(s, new DiscordEventHandlers$Builder().setReadyEventHandler((ReadyCallback)new DiscordCallback(this)).build(), true);
+        DiscordRPC.discordInitialize(applicationId, new DiscordEventHandlers.Builder().setReadyEventHandler(new DiscordCallback(this)).build(), true);
         new leaf.DiscordRPC(this, "Discord Callback").start();
     }
     
     public void setDiscordStatus() {
-        final DiscordRichPresence$Builder discordRichPresence$Builder = new DiscordRichPresence$Builder("Playing Minecraft 1.8.9");
-        discordRichPresence$Builder.setBigImage("icon", "Leaf Client");
-        discordRichPresence$Builder.setSmallImage("check", "Version 4.0");
-        discordRichPresence$Builder.setStartTimestamps(this.lastCurrentTimeMillis);
-        DiscordRPC.discordUpdatePresence(discordRichPresence$Builder.build());
+        final DiscordRichPresence.Builder builder = new DiscordRichPresence.Builder("Playing Minecraft 1.8.9");
+        builder.setBigImage("icon", "Leaf Client");
+        builder.setSmallImage("check", "Version 4.0");
+        builder.setStartTimestamps(this.lastCurrentTimeMillis);
+        DiscordRPC.discordUpdatePresence(builder.build());
     }
 }

@@ -25,6 +25,7 @@ public class PlayerCosmeticSetting extends lIIllIIIllllIlllIllI
         this.lIIIlllIIIllIIIllIII = liiIlllIIIllIIIllIII;
     }
     
+    @Override
     public void n_() {
         final g g = new g(this.IlIlIIIllIIllIlllllI);
         final int n = (int)Toolkit.getDefaultToolkit().getScreenSize().getWidth();
@@ -73,13 +74,14 @@ public class PlayerCosmeticSetting extends lIIllIIIllllIlllIllI
         this.lIIIIlIIIIIlllIllIII = new IlIlIIIllIllIIIIIllI(list, 945, 400, 32, 400, 3);
     }
     
+    @Override
     public void llllIIIIlIIIlIlllIll(final int n, final int n2, final float n3) {
         final g g = new g(this.IlIlIIIllIIllIlllllI);
         final int llllIIIIlIIIlIlllIll = g.llllIIIIlIIIlIlllIll();
         final int ilIlIlIlIlllllllllIl = g.IlIlIlIlIlllllllllIl();
         lllllIlIIIlIlIIlllII.lIlIlIIIllIIllIIIllI();
         this.IlIlIIIllIIllIlllllI.lllIllIIIllllllIllll().llllIIIIlIIIlIlllIll(new lIllllIllIllIIllllll("client/main.png"));
-        llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(0, 0, 0.0f, 0.0f, llllIIIIlIIIlIlllIll, ilIlIlIlIlllllllllIl, (float)llllIIIIlIIIlIlllIll, (float)ilIlIlIlIlllllllllIl);
+        net.minecraft.client.llIllIIIIIllIlIIIIlI.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(0, 0, 0.0f, 0.0f, llllIIIIlIIIlIlllIll, ilIlIlIlIlllllllllIl, (float)llllIIIIlIIIlIlllIll, (float)ilIlIlIlIlllllllllIl);
         final Iterator<llllIIIlIlllIlIIIIIl> iterator = this.IlIlIIIllIllIIIIIllI.iterator();
         while (iterator.hasNext()) {
             iterator.next().IlIlIlIlIlllllllllIl();
@@ -89,9 +91,10 @@ public class PlayerCosmeticSetting extends lIIllIIIllllIlllIllI
         }
         this.llllIIIlIlllIlIIIIIl.IlIlIlIlIlllllllllIl();
         this.lIIIIlIIIIIlllIllIII.IlIlIlIlIlllllllllIl();
-        IIlllIIlIllIllIlIIll.llllIIIIlIIIlIlllIll(Setting.llllIIIIlIIIlIlllIll(1300), Setting.IlIlIlIlIlllllllllIl(800), Setting.llllIIIIlIIIlIlllIll(200), 150.0f, 0.0f, (lllIIIIlllllIlIIllIl)this.IlIlIIIllIIllIlllllI.lIIIIlIIIIIlllIllIII);
+        net.minecraft.client.llIllIIIIIllIlIIIIlI.IlIlIlIlIlllllllllIl.IIlllIIlIllIllIlIIll.llllIIIIlIIIlIlllIll(Setting.llllIIIIlIIIlIlllIll(1300), Setting.IlIlIlIlIlllllllllIl(800), Setting.llllIIIIlIIIlIlllIll(200), 150.0f, 0.0f, this.IlIlIIIllIIllIlllllI.lIIIIlIIIIIlllIllIII);
     }
     
+    @Override
     protected void llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3) {
         final Iterator<llllIIIlIlllIlIIIIIl> iterator = this.IlIlIIIllIllIIIIIllI.iterator();
         while (iterator.hasNext()) {
@@ -103,12 +106,14 @@ public class PlayerCosmeticSetting extends lIIllIIIllllIlllIllI
         this.llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll(n, n2, n3);
     }
     
+    @Override
     public void llllIIIIlIIIlIlllIll(final Minecraft minecraft, final int n, final int n2) {
         this.IlIlIIIllIllIIIIIllI = new ArrayList();
         this.IllIIlllIIIIlllIIlIl = new ArrayList();
         super.llllIIIIlIIIlIlllIll(minecraft, n, n2);
     }
     
+    @Override
     public void IlIlIlIlIlllllllllIl() {
         super.IlIlIlIlIlllllllllIl();
         final int eventDWheel = Mouse.getEventDWheel();
@@ -134,6 +139,7 @@ public class PlayerCosmeticSetting extends lIIllIIIllllIlllIllI
         this.llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll(n, n2);
     }
     
+    @Override
     public void o_() {
         this.IlIlIIIllIIllIlllllI.IIIIlllIIIIIIlIIIlll = null;
     }

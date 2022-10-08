@@ -14,6 +14,7 @@ class RenderCosmeticWing extends IlIIIlIlIIIllIlIlIIl
         this.llllIIIIlIIIlIlllIll = llllIIIIlIIIlIlllIll;
     }
     
+    @Override
     public void llllIIIIlIIIlIlllIll(final llIllIIIIIllIlIIIIlI llIllIIIIIllIlIIIIlI, final float n, final float n2, final float n3, final float n4, final float n5, final float n6) {
         GL11.glPushMatrix();
         Minecraft.getMinecraft().lllIllIIIllllllIllll().llllIIIIlIIIlIlllIll(((llllIIIIlIIIlIlllIll)llIllIIIIIllIlIIIIlI).llIIlIIIlIIIllIlIIIl());

@@ -16,6 +16,7 @@ public class RenderSetting extends lIIllIIIllllIlllIllI
     private ArrayList IlIlIIIllIllIIIIIllI;
     private IlIlIIIllIllIIIIIllI IllIIlllIIIIlllIIlIl;
     
+    @Override
     public void n_() {
         final g g = new g(this.IlIlIIIllIIllIlllllI);
         final int n = (int)Toolkit.getDefaultToolkit().getScreenSize().getWidth();
@@ -34,30 +35,34 @@ public class RenderSetting extends lIIllIIIllllIlllIllI
         this.IllIIlllIIIIlllIIlIl = new IlIlIIIllIllIIIIIllI(this.IlIlIIIllIllIIIIIllI, 1230, 310, 32, 460, 5);
     }
     
+    @Override
     public void llllIIIIlIIIlIlllIll(final int n, final int n2, final float n3) {
         final g g = new g(this.IlIlIIIllIIllIlllllI);
         final int llllIIIIlIIIlIlllIll = g.llllIIIIlIIIlIlllIll();
         final int ilIlIlIlIlllllllllIl = g.IlIlIlIlIlllllllllIl();
         lllllIlIIIlIlIIlllII.lIlIlIIIllIIllIIIllI();
         this.IlIlIIIllIIllIlllllI.lllIllIIIllllllIllll().llllIIIIlIIIlIlllIll(new lIllllIllIllIIllllll("client/main_mod.png"));
-        llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(0, 0, 0.0f, 0.0f, llllIIIIlIIIlIlllIll, ilIlIlIlIlllllllllIl, (float)llllIIIIlIIIlIlllIll, (float)ilIlIlIlIlllllllllIl);
+        net.minecraft.client.llIllIIIIIllIlIIIIlI.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(0, 0, 0.0f, 0.0f, llllIIIIlIIIlIlllIll, ilIlIlIlIlllllllllIl, (float)llllIIIIlIIIlIlllIll, (float)ilIlIlIlIlllllllllIl);
         for (int ilIlIIIllIllIIIIIllI = this.IllIIlllIIIIlllIIlIl.IlIlIIIllIllIIIIIllI(); this.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll(ilIlIIIllIllIIIIIllI); ++ilIlIIIllIllIIIIIllI) {
             ((llIIlIIIlIIIllIlIIIl)this.IlIlIIIllIllIIIIIllI.get(ilIlIIIllIllIIIIIllI)).IlIlIlIlIlllllllllIl();
         }
         this.IllIIlllIIIIlllIIlIl.IlIlIlIlIlllllllllIl();
     }
     
+    @Override
     protected void llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3) {
         for (int ilIlIIIllIllIIIIIllI = this.IllIIlllIIIIlllIIlIl.IlIlIIIllIllIIIIIllI(); this.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll(ilIlIIIllIllIIIIIllI); ++ilIlIIIllIllIIIIIllI) {
             ((llIIlIIIlIIIllIlIIIl)this.IlIlIIIllIllIIIIIllI.get(ilIlIIIllIllIIIIIllI)).llllIIIIlIIIlIlllIll(n, n2, n3);
         }
     }
     
+    @Override
     public void llllIIIIlIIIlIlllIll(final Minecraft minecraft, final int n, final int n2) {
         this.IlIlIIIllIllIIIIIllI = new ArrayList();
         super.llllIIIIlIIIlIlllIll(minecraft, n, n2);
     }
     
+    @Override
     public void IlIlIlIlIlllllllllIl() {
         super.IlIlIlIlIlllllllllIl();
         final int eventDWheel = Mouse.getEventDWheel();
@@ -78,6 +83,7 @@ public class RenderSetting extends lIIllIIIllllIlllIllI
         }
     }
     
+    @Override
     public void o_() {
         this.IlIlIIIllIIllIlllllI.IIIIlllIIIIIIlIIIlll = null;
     }

@@ -11,38 +11,38 @@ import net.minecraft.llllIIIlIlllIlIIIIIl.*;
 public class KillEffectMod extends Mod
 {
     public boolean llllIIIIlIIIlIlllIll;
-    public boolean hideCadaver;
-    public boolean bypass;
+    public boolean IlIlIlIlIlllllllllIl;
+    public boolean llIllIIIIIllIlIIIIlI;
     public String IlIIIlIlIIIllIlIlIIl;
-    public String effectType;
-    private int nazo;
+    public String IlIlIIIllIllIIIIIllI;
+    private int IllIIlllIIIIlllIIlIl;
     
     public KillEffectMod() {
         super("KillEffect", 0, 0, 0, 0, 0, 0, Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "enable")));
-        this.nazo = -1;
+        this.IllIIlllIIIIlllIIlIl = -1;
         this.llllIIIIlIIIlIlllIll = false;
         this.IlIIIlIlIIIllIlIlIIl = "";
-        this.hideCadaver = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "hide_cadaver"));
-        this.bypass = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "bypass"));
-        this.effectType = Leaf.instance.saveConfig.loadConfig("KillEffect", "effect");
+        this.IlIlIlIlIlllllllllIl = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "hide_cadaver"));
+        this.llIllIIIIIllIlIIIIlI = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "bypass"));
+        this.IlIlIIIllIllIIIIIllI = Leaf.instance.saveConfig.loadConfig("KillEffect", "effect");
     }
     
     public void llllIIIIlIIIlIlllIll(final lllIIIIlllllIlIIllIl lllIIIIlllllIlIIllIl) {
         if (!this.IlIlIlIlIlllllllllIl(lllIIIIlllllIlIIllIl)) {
             return;
         }
-        if (this.hideCadaver) {
+        if (this.IlIlIlIlIlllllllllIl) {
             Minecraft.getMinecraft().IIIlIIIlIlIIlllIIlll().llllIIIIlIIIlIlllIll(new IIIlIIIlIlIIlllIIlll(new int[] { lllIIIIlllllIlIIllIl.IlllIIIIlIIIlIlIlIIl() }));
         }
-        final String effectType;
-        switch (effectType = this.effectType) {
+        final String ilIlIIIllIllIIIIIllI;
+        switch (ilIlIIIllIllIIIIIllI = this.IlIlIIIllIllIIIIIllI) {
             case "EXPLOSION": {
                 Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.IlllllllIIIlIIIlIlII.llllIIIIlIIIlIlllIll(IlIllllIIlIIlIlIlIll.llIllIIIIIllIlIIIIlI, lllIIIIlllllIlIIllIl.IIlllIlIIllIlIlIlIIl, lllIIIIlllllIlIIllIl.llIIIlIlIllIIlIlIlII, lllIIIIlllllIlIIllIl.lllllIlIIIlIlIIlllII, 0.0, 0.0, 0.0, new int[0]);
                 Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll("random.explode", 1.0f, 1.0f);
                 break;
             }
             case "LIGHTNING": {
-                Minecraft.getMinecraft().IIIlIIIlIlIIlllIIlll().llllIIIIlIIIlIlllIll(new IllIlIIllIllIIlIllII((llIllIIIIIllIlIIIIlI)new llllIIIIlIIIlIlllIll(lllIIIIlllllIlIIllIl.IlllllllIIIlIIIlIlII, lllIIIIlllllIlIIllIl.IIlllIlIIllIlIlIlIIl, lllIIIIlllllIlIIllIl.llIIIlIlIllIIlIlIlII, lllIIIIlllllIlIIllIl.lllllIlIIIlIlIIlllII)));
+                Minecraft.getMinecraft().IIIlIIIlIlIIlllIIlll().llllIIIIlIIIlIlllIll(new IllIlIIllIllIIlIllII(new llllIIIIlIIIlIlllIll(lllIIIIlllllIlIIllIl.IlllllllIIIlIIIlIlII, lllIIIIlllllIlIIllIl.IIlllIlIIllIlIlIlIIl, lllIIIIlllllIlIIllIl.llIIIlIlIllIIlIlIlII, lllIIIIlllllIlIIllIl.lllllIlIIIlIlIIlllII)));
                 Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll("ambient.weather.thunder", 1.0f, 1.0f);
                 break;
             }
@@ -50,8 +50,8 @@ public class KillEffectMod extends Mod
                 break;
             }
             case "BLOOD": {
-                Minecraft.getMinecraft().llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll((net.minecraft.llllIIIlIlllIlIIIIIl.llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll)null, 2001, lllIIIIlllllIlIIllIl.IlIlIIIlIIlIlIIlllIl().llllIIIIlIIIlIlllIll(0, 1, 0), 152);
-                Minecraft.getMinecraft().llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll((net.minecraft.llllIIIlIlllIlIIIIIl.llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll)null, 2001, lllIIIIlllllIlIIllIl.IlIlIIIlIIlIlIIlllIl().llllIIIIlIIIlIlllIll(0, 1, 0), 152);
+                Minecraft.getMinecraft().llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll(null, 2001, lllIIIIlllllIlIIllIl.IlIlIIIlIIlIlIIlllIl().llllIIIIlIIIlIlllIll(0, 1, 0), 152);
+                Minecraft.getMinecraft().llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll(null, 2001, lllIIIIlllllIlIIllIl.IlIlIIIlIIlIlIIlllIl().llllIIIIlIIIlIlllIll(0, 1, 0), 152);
                 break;
             }
             default:
@@ -62,15 +62,15 @@ public class KillEffectMod extends Mod
     
     public void llllIIIIlIIIlIlllIll(final llIllIIIIIllIlIIIIlI llIllIIIIIllIlIIIIlI) {
         if (this.IlIIIlIlIIIllIlIlIIl.equals(llIllIIIIIllIlIIIIlI.s_())) {
-            final String effectType;
-            switch (effectType = this.effectType) {
+            final String ilIlIIIllIllIIIIIllI;
+            switch (ilIlIIIllIllIIIIIllI = this.IlIlIIIllIllIIIIIllI) {
                 case "EXPLOSION": {
                     Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.IlllllllIIIlIIIlIlII.llllIIIIlIIIlIlllIll(IlIllllIIlIIlIlIlIll.llIllIIIIIllIlIIIIlI, llIllIIIIIllIlIIIIlI.IIlllIlIIllIlIlIlIIl, llIllIIIIIllIlIIIIlI.llIIIlIlIllIIlIlIlII, llIllIIIIIllIlIIIIlI.lllllIlIIIlIlIIlllII, 0.0, 0.0, 0.0, new int[0]);
                     Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll("random.explode", 1.0f, 1.0f);
                     break;
                 }
                 case "LIGHTNING": {
-                    Minecraft.getMinecraft().IIIlIIIlIlIIlllIIlll().llllIIIIlIIIlIlllIll(new IllIlIIllIllIIlIllII((llIllIIIIIllIlIIIIlI)new llllIIIIlIIIlIlllIll(llIllIIIIIllIlIIIIlI.IlllllllIIIlIIIlIlII, llIllIIIIIllIlIIIIlI.IIlllIlIIllIlIlIlIIl, llIllIIIIIllIlIIIIlI.llIIIlIlIllIIlIlIlII, llIllIIIIIllIlIIIIlI.lllllIlIIIlIlIIlllII)));
+                    Minecraft.getMinecraft().IIIlIIIlIlIIlllIIlll().llllIIIIlIIIlIlllIll(new IllIlIIllIllIIlIllII(new llllIIIIlIIIlIlllIll(llIllIIIIIllIlIIIIlI.IlllllllIIIlIIIlIlII, llIllIIIIIllIlIIIIlI.IIlllIlIIllIlIlIlIIl, llIllIIIIIllIlIIIIlI.llIIIlIlIllIIlIlIlII, llIllIIIIIllIlIIIIlI.lllllIlIIIlIlIIlllII)));
                     Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll("ambient.weather.thunder", 1.0f, 1.0f);
                     break;
                 }
@@ -78,8 +78,8 @@ public class KillEffectMod extends Mod
                     break;
                 }
                 case "BLOOD": {
-                    Minecraft.getMinecraft().llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll((net.minecraft.llllIIIlIlllIlIIIIIl.llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll)null, 2001, llIllIIIIIllIlIIIIlI.IlIlIIIlIIlIlIIlllIl().llllIIIIlIIIlIlllIll(0, 1, 0), 152);
-                    Minecraft.getMinecraft().llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll((net.minecraft.llllIIIlIlllIlIIIIIl.llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll)null, 2001, llIllIIIIIllIlIIIIlI.IlIlIIIlIIlIlIIlllIl().llllIIIIlIIIlIlllIll(0, 1, 0), 152);
+                    Minecraft.getMinecraft().llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll(null, 2001, llIllIIIIIllIlIIIIlI.IlIlIIIlIIlIlIIlllIl().llllIIIIlIIIlIlllIll(0, 1, 0), 152);
+                    Minecraft.getMinecraft().llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll(null, 2001, llIllIIIIIllIlIIIIlI.IlIlIIIlIIlIlIIlllIl().llllIIIIlIIIlIlllIll(0, 1, 0), 152);
                     break;
                 }
                 default:

@@ -15,6 +15,6 @@ class CoordinateSetting0 extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("Coordinate", "biome", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.biome = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
     }
 }

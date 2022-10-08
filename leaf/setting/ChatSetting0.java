@@ -15,6 +15,6 @@ class ChatSetting0 extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("Chat", "access", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.access = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.llIllIIIIIllIlIIIIlI = this.llllIIIIlIIIlIlllIll;
     }
 }

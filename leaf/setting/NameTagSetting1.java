@@ -15,6 +15,6 @@ class NameTagSetting1 extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("NameTag", "shadow", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.llIllIlIIIIllIlIIllI.shadow = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.llIllIlIIIIllIlIIllI.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
     }
 }

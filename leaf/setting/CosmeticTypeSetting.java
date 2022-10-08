@@ -16,6 +16,6 @@ class CosmeticTypeSetting extends llllIIIIlIIIlIlllIll
     
     @Override
     public void llllIIIIlIIIlIlllIll() {
-        Minecraft.getMinecraft().llllIIIIlIIIlIlllIll((lIIllIIIllllIlllIllI)new PlayerCosmeticSetting(this.IlIlIlIlIlllllllllIl.get(this.llIllIIIIIllIlIIIIlI)));
+        Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new PlayerCosmeticSetting(this.IlIlIlIlIlllllllllIl.get(this.llIllIIIIIllIlIIIIlI)));
     }
 }

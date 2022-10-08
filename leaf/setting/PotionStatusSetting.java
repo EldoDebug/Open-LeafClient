@@ -15,6 +15,6 @@ class PotionStatusSetting extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("PotionStatus", "background", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlIlIIIllIllIIIIIllI.background = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.IlIlIIIllIllIIIIIllI.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
     }
 }

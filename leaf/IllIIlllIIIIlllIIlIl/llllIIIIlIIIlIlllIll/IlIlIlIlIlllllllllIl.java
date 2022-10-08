@@ -63,7 +63,7 @@ public class IlIlIlIlIlllllllllIl extends llIIlIIIlIIIllIlIIIl
             Leaf.instance.saveConfig.saveConfig(this.IlIlIIIllIllIIIIIllI.IlIlIlIlIlllllllllIl(), "enable", String.valueOf(this.IlIlIIIllIllIIIIIllI.lIlIlIIIllIIllIIIllI()));
         }
         else if (n >= this.llllIIIIlIIIlIlllIll && n <= this.llllIIIIlIIIlIlllIll + this.llIllIIIIIllIlIIIIlI && n2 >= this.IlIlIlIlIlllllllllIl + this.IlIIIlIlIIIllIlIlIIl / 2 && n2 <= this.IlIlIlIlIlllllllllIl + this.IlIIIlIlIIIllIlIlIIl && !this.IlIlIIIllIllIIIIIllI.IlIlIlIlIlllllllllIl().equals("FreeLook") && !this.IlIlIIIllIllIIIIIllI.IlIlIlIlIlllllllllIl().equals("Old Animation")) {
-            Minecraft.getMinecraft().llllIIIIlIIIlIlllIll((lIIllIIIllllIlllIllI)new HudSetting(this.IlIlIIIllIllIIIIIllI));
+            Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new HudSetting(this.IlIlIIIllIllIIIIIllI));
         }
     }
 }

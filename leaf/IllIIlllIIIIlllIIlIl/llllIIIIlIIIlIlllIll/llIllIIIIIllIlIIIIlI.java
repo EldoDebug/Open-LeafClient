@@ -55,7 +55,7 @@ public class llIllIIIIIllIlIIIIlI extends llIIlIIIlIIIllIlIIIl
     @Override
     public void llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3) {
         if (n >= this.llllIIIIlIIIlIlllIll && n <= this.llllIIIIlIIIlIlllIll + this.llIllIIIIIllIlIIIIlI && n2 >= this.IlIlIlIlIlllllllllIl && n2 <= this.IlIlIlIlIlllllllllIl + this.IlIIIlIlIIIllIlIlIIl) {
-            Minecraft.getMinecraft().IlIIlIlIIIlIIlIlIlII().llllIIIIlIIIlIlllIll((IlIlIlIlIlllllllllIl)lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll(new lIllllIllIllIIllllll("gui.button.press"), 1.0f));
+            Minecraft.getMinecraft().IlIIlIlIIIlIIlIlIlII().llllIIIIlIIIlIlllIll(lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll(new lIllllIllIllIIllllll("gui.button.press"), 1.0f));
             this.llllIIIIlIIIlIlllIll();
         }
     }

@@ -15,6 +15,6 @@ class KillEffectSetting0 extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("KillEffect", "bypass", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.bypass = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.llIllIIIIIllIlIIIIlI = this.llllIIIIlIIIlIlllIll;
     }
 }

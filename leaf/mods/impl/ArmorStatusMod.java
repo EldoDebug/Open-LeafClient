@@ -38,10 +38,10 @@ public class ArmorStatusMod extends Mod
         GL11.glTranslatef((float)(this.IlIIIlIlIIIllIlIlIIl() + 2), (float)(this.IlIlIIIllIllIIIIIllI() + 2), 0.0f);
         GL11.glScalef(this.llIllIlIIIIllIlIIllI(), this.llIllIlIIIIllIlIIllI(), 1.0f);
         GL11.glTranslatef((float)(-(this.IlIIIlIlIIIllIlIlIIl() + 2)), (float)(-(this.IlIlIIIllIllIIIIIllI() + 2)), 0.0f);
-        Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.llIIlIIIlIIIllIlIIIl().IlIlIlIlIlllllllllIl(new lllIIIIlIlIllIIlIIIl((IlIIIlIlIIIllIlIlIIl)IIllIIllIIIlIlIIIIlI.llIIIlIlllIllIIlIllI), this.IlIIIlIlIIIllIlIlIIl() + 8, this.IlIlIIIllIllIIIIIllI() + 8);
-        Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.llIIlIIIlIIIllIlIIIl().IlIlIlIlIlllllllllIl(new lllIIIIlIlIllIIlIIIl((IlIIIlIlIIIllIlIlIIl)IIllIIllIIIlIlIIIIlI.IlIIllIIllIIllIIlIIl), this.IlIIIlIlIIIllIlIlIIl() + 8, this.IlIlIIIllIllIIIIIllI() + 26);
-        Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.llIIlIIIlIIIllIlIIIl().IlIlIlIlIlllllllllIl(new lllIIIIlIlIllIIlIIIl((IlIIIlIlIIIllIlIlIIl)IIllIIllIIIlIlIIIIlI.lllllIIIIIlIlIIIIIIl), this.IlIIIlIlIIIllIlIlIIl() + 8, this.IlIlIIIllIllIIIIIllI() + 44);
-        Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.llIIlIIIlIIIllIlIIIl().IlIlIlIlIlllllllllIl(new lllIIIIlIlIllIIlIIIl((IlIIIlIlIIIllIlIlIIl)IIllIIllIIIlIlIIIIlI.IllIIlllllIIllIIllIl), this.IlIIIlIlIIIllIlIlIIl() + 8, this.IlIlIIIllIllIIIIIllI() + 62);
+        Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.llIIlIIIlIIIllIlIIIl().IlIlIlIlIlllllllllIl(new lllIIIIlIlIllIIlIIIl(IIllIIllIIIlIlIIIIlI.llIIIlIlllIllIIlIllI), this.IlIIIlIlIIIllIlIlIIl() + 8, this.IlIlIIIllIllIIIIIllI() + 8);
+        Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.llIIlIIIlIIIllIlIIIl().IlIlIlIlIlllllllllIl(new lllIIIIlIlIllIIlIIIl(IIllIIllIIIlIlIIIIlI.IlIIllIIllIIllIIlIIl), this.IlIIIlIlIIIllIlIlIIl() + 8, this.IlIlIIIllIllIIIIIllI() + 26);
+        Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.llIIlIIIlIIIllIlIIIl().IlIlIlIlIlllllllllIl(new lllIIIIlIlIllIIlIIIl(IIllIIllIIIlIlIIIIlI.lllllIIIIIlIlIIIIIIl), this.IlIIIlIlIIIllIlIlIIl() + 8, this.IlIlIIIllIllIIIIIllI() + 44);
+        Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.llIIlIIIlIIIllIlIIIl().IlIlIlIlIlllllllllIl(new lllIIIIlIlIllIIlIIIl(IIllIIllIIIlIlIIIIlI.IllIIlllllIIllIIllIl), this.IlIIIlIlIIIllIlIlIIl() + 8, this.IlIlIIIllIllIIIIIllI() + 62);
         GL11.glPopMatrix();
         GL11.glDisable(2896);
         this.llIllIIIIIllIlIIIIlI().IlIlIlIlIlllllllllIl(n, n2);

@@ -47,30 +47,30 @@ public class llllIIIlIlllIlIIIIIl extends llIIlIIIlIIIllIlIIIl
     @Override
     public void llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3) {
         if (n >= this.llllIIIIlIIIlIlllIll && n <= this.llllIIIIlIIIlIlllIll + this.IlIIIlIlIIIllIlIlIIl && n2 >= this.llIllIIIIIllIlIIIIlI && n2 <= this.llIllIIIIIllIlIIIIlI + this.IlIlIIIllIllIIIIIllI) {
-            Minecraft.getMinecraft().IlIIlIlIIIlIIlIlIlII().llllIIIIlIIIlIlllIll((IlIlIlIlIlllllllllIl)lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll(new lIllllIllIllIIllllll("gui.button.press"), 1.0f));
+            Minecraft.getMinecraft().IlIIlIlIIIlIIlIlIlII().llllIIIIlIIIlIlllIll(lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll(new lIllllIllIllIIllllll("gui.button.press"), 1.0f));
             if (this.IllIIlllIIIIlllIIlIl.equals("mod")) {
-                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll((lIIllIIIllllIlllIllI)new CosmeticSetting());
+                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new CosmeticSetting());
             }
             else if (this.IllIIlllIIIIlllIIlIl.equals("cosmetic")) {
-                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll((lIIllIIIllllIlllIllI)new PlayerCosmeticSetting("Cape"));
+                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new PlayerCosmeticSetting("Cape"));
             }
             else if (this.IllIIlllIIIIlllIIlIl.equals("location")) {
-                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll((lIIllIIIllllIlllIllI)new ModList());
+                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new ModList());
             }
             else if (this.IllIIlllIIIIlllIIlIl.equals("setting")) {
-                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll((lIIllIIIllllIlllIllI)new RenderSetting());
+                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new RenderSetting());
             }
             else if (this.IllIIlllIIIIlllIIlIl.equals("single")) {
-                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll((lIIllIIIllllIlllIllI)new lllllIlIlIlllIlllIlI());
+                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new lllllIlIlIlllIlllIlI());
             }
             else if (this.IllIIlllIIIIlllIIlIl.equals("multi")) {
-                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll((lIIllIIIllllIlllIllI)new IlIllllIIlIIlIlIlIll());
+                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new IlIllllIIlIIlIlIlIll());
             }
             else if (this.IllIIlllIIIIlllIIlIl.equals("account")) {
-                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll((lIIllIIIllllIlllIllI)new lllIlIIIIIlIlllllIlI());
+                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new lllIlIIIIIlIlllllIlI());
             }
             else if (this.IllIIlllIIIIlllIIlIl.equals("settings")) {
-                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll((lIIllIIIllllIlllIllI)new IllIlIIllIllIIlIllII((lIIllIIIllllIlllIllI)null, Minecraft.getMinecraft().IIIlIIIlIlIIlllIIlll));
+                Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new IllIlIIllIllIIlIllII(null, Minecraft.getMinecraft().IIIlIIIlIlIIlllIIlll));
             }
             else if (this.IllIIlllIIIIlllIIlIl.equals("close")) {
                 Minecraft.getMinecraft().IlIlIIIllIIllIlllllI();

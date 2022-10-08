@@ -15,6 +15,6 @@ class ChatSetting1 extends IlIIIlIlIIIllIlIlIIl
     @Override
     public void llllIIIIlIIIlIlllIll() {
         Leaf.instance.saveConfig.saveConfig("Chat", "background", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.background = this.llllIIIIlIIIlIlllIll;
+        Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.IlIlIlIlIlllllllllIl = this.llllIIIIlIIIlIlllIll;
     }
 }
