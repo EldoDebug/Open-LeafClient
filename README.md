@@ -1,5 +1,5 @@
 # Open-LeafClient
-Minecraft 1.8.9 PvP Client  
+Minecraft 1.8.9 Skid PvP Client  
 Developed by Lefiy  
   
 Discord Server  
