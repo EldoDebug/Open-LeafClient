@@ -58,11 +58,11 @@ public class llllIIIIlIIIlIlllIll extends llIIlIIIlIIIllIlIIIl
             else {
                 this.llIllIIIIIllIlIIIIlI = 0;
             }
-            this.llllIIIIlIIIlIlllIll();
+            this.addSetting();
         }
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
+    public void addSetting() {
     }
 }

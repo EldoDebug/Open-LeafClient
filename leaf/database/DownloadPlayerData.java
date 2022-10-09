@@ -12,35 +12,35 @@ import java.io.*;
 
 public class DownloadPlayerData
 {
-    public Map llllIIIIlIIIlIlllIll;
-    public Map IlIlIlIlIlllllllllIl;
-    public Map llIllIIIIIllIlIIIIlI;
-    public Map IlIIIlIlIIIllIlIlIIl;
-    public Map IlIlIIIllIllIIIIIllI;
-    public Map IllIIlllIIIIlllIIlIl;
-    public ArrayList llllIIIlIlllIlIIIIIl;
+    public Map rankData;
+    public Map capeData;
+    public Map wingData;
+    public Map hatData;
+    public Map data;
+    public Map hashMap;
+    public ArrayList serverData;
     
     public DownloadPlayerData() {
-        this.llllIIIIlIIIlIlllIll = new HashMap();
-        this.IlIlIlIlIlllllllllIl = new HashMap();
-        this.llIllIIIIIllIlIIIIlI = new HashMap();
-        this.IlIIIlIlIIIllIlIlIIl = new HashMap();
-        this.IlIlIIIllIllIIIIIllI = new HashMap();
-        this.IllIIlllIIIIlllIIlIl = new HashMap();
-        this.llllIIIlIlllIlIIIIIl = new ArrayList();
-        this.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll(this.llllIIIIlIIIlIlllIll, "mjw8waevj2ipnnw/rank.txt");
-        this.IlIlIlIlIlllllllllIl = this.llllIIIIlIIIlIlllIll(this.IlIlIlIlIlllllllllIl, "tt6o7c1q0h2w9bx/cape.txt");
-        this.llIllIIIIIllIlIIIIlI = this.llllIIIIlIIIlIlllIll(this.llIllIIIIIllIlIIIIlI, "gsajze1qwp38gt5/wing.txt");
-        this.IlIIIlIlIIIllIlIlIIl = this.llllIIIIlIIIlIlllIll(this.IlIIIlIlIIIllIlIlIIl, "eglzg7zphqqv0lr/hat.txt");
-        this.IlIlIIIllIllIIIIIllI = this.IlIlIlIlIlllllllllIl(this.IlIlIIIllIllIIIIIllI, "41e1yfej2b0hx77/data.txt");
-        this.llllIIIlIlllIlIIIIIl = this.llllIIIIlIIIlIlllIll(this.llllIIIlIlllIlIIIIIl, "w55fq9992i34uyp/server.txt");
+        this.rankData = new HashMap();
+        this.capeData = new HashMap();
+        this.wingData = new HashMap();
+        this.hatData = new HashMap();
+        this.data = new HashMap();
+        this.hashMap = new HashMap();
+        this.serverData = new ArrayList();
+        this.rankData = this.downloadPlayerData(this.rankData, "mjw8waevj2ipnnw/rank.txt");
+        this.capeData = this.downloadPlayerData(this.capeData, "tt6o7c1q0h2w9bx/cape.txt");
+        this.wingData = this.downloadPlayerData(this.wingData, "gsajze1qwp38gt5/wing.txt");
+        this.hatData = this.downloadPlayerData(this.hatData, "eglzg7zphqqv0lr/hat.txt");
+        this.data = this.downloadData(this.data, "41e1yfej2b0hx77/data.txt");
+        this.serverData = this.downloadServerData(this.serverData, "w55fq9992i34uyp/server.txt");
     }
     
-    Map llllIIIIlIIIlIlllIll(final Map map, final String s) {
+    Map downloadPlayerData(final Map map, final String s) {
         final String string = "https://www.dropbox.com/s/" + s + "?raw=1";
         map.clear();
         try {
-            final BufferedReader bufferedReader = new BufferedReader(new FileReader(this.llllIIIIlIIIlIlllIll(new URL(string))));
+            final BufferedReader bufferedReader = new BufferedReader(new FileReader(this.nazoMethod(new URL(string))));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 map.put(line.split(":")[0], line.split(":")[1]);
@@ -53,11 +53,11 @@ public class DownloadPlayerData
         }
     }
     
-    Map IlIlIlIlIlllllllllIl(final Map map, final String s) {
+    Map downloadData(final Map map, final String s) {
         final String string = "https://www.dropbox.com/s/" + s + "?raw=1";
         map.clear();
         try {
-            final BufferedReader bufferedReader = new BufferedReader(new FileReader(this.llllIIIIlIIIlIlllIll(new URL(string))));
+            final BufferedReader bufferedReader = new BufferedReader(new FileReader(this.nazoMethod(new URL(string))));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 if (line.split(":")[1].contains(",")) {
@@ -70,7 +70,7 @@ public class DownloadPlayerData
                     catch (IOException ex) {}
                     final lIllllIllIllIIllllll llllIIIIlIIIlIlllIll = Minecraft.getMinecraft().lllIllIIIllllllIllll().llllIIIIlIIIlIlllIll(line.split(":")[0], new IlIlIlIlIlllllllllIl(read));
                     map.put(line.split(":")[0], llllIIIIlIIIlIlllIll);
-                    this.IllIIlllIIIIlllIIlIl.put(llllIIIIlIIIlIlllIll, Arrays.asList(split[1], split[2], split[3], split[4], split[5], split[6], split[7], split[8], split[9], split[10], split[11], split[12], split[13], split[14], split[15]));
+                    this.hashMap.put(llllIIIIlIIIlIlllIll, Arrays.asList(split[1], split[2], split[3], split[4], split[5], split[6], split[7], split[8], split[9], split[10], split[11], split[12], split[13], split[14], split[15]));
                 }
                 else {
                     final String string3 = "https://www.dropbox.com/s/" + line.split(":")[1] + "?raw=1";
@@ -90,11 +90,11 @@ public class DownloadPlayerData
         }
     }
     
-    ArrayList llllIIIIlIIIlIlllIll(final ArrayList list, final String s) {
+    ArrayList downloadServerData(final ArrayList list, final String s) {
         final String string = "https://www.dropbox.com/s/" + s + "?raw=1";
         list.clear();
         try {
-            final BufferedReader bufferedReader = new BufferedReader(new FileReader(this.llllIIIIlIIIlIlllIll(new URL(string))));
+            final BufferedReader bufferedReader = new BufferedReader(new FileReader(this.nazoMethod(new URL(string))));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 if (!line.equals("none")) {
@@ -109,13 +109,13 @@ public class DownloadPlayerData
         }
     }
     
-    File llllIIIIlIIIlIlllIll(final URL url) {
-        File llllIIIIlIIIlIlllIll = null;
+    File nazoMethod(final URL url) {
+        File temp = null;
         Throwable t = null;
         try {
             final InputStream openStream = url.openStream();
             try {
-                llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll(openStream);
+                temp = this.createTemp(openStream);
             }
             finally {
                 if (openStream != null) {
@@ -135,10 +135,10 @@ public class DownloadPlayerData
                 }
             }
         }
-        return llllIIIIlIIIlIlllIll;
+        return temp;
     }
     
-    File llllIIIIlIIIlIlllIll(final InputStream inputStream) {
+    File createTemp(final InputStream inputStream) {
         final File tempFile = File.createTempFile("config", ".tmp");
         tempFile.deleteOnExit();
         Throwable t = null;

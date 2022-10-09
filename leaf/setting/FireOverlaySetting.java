@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class FireOverlaySetting extends IlIIIlIlIIIllIlIlIIl
+class FireOverlaySetting extends SettingBase
 {
     final /* synthetic */ RenderSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class FireOverlaySetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Setting", "hide_fire", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IIIlIIlIIIIlllIlllII = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Setting", "hide_fire", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.hideFire = this.llllIIIIlIIIlIlllIll;
     }
 }

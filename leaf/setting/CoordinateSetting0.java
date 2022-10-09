@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class CoordinateSetting0 extends IlIIIlIlIIIllIlIlIIl
+class CoordinateSetting0 extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class CoordinateSetting0 extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Coordinate", "biome", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Coordinate", "biome", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.coordinateMod.biome = this.llllIIIIlIIIlIlllIll;
     }
 }

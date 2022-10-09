@@ -14,9 +14,9 @@ class llIIIlIlIllIIlIlIlII extends GuiLeafSetting
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
+    public void addSetting() {
         final int llIllIIIIIllIlIIIIlI = Setting.llIllIIIIIllIlIIIIlI(this.llllIIIIlIIIlIlllIll);
-        Leaf.instance.saveConfig.saveConfig(HudSetting.llllIIIIlIIIlIlllIll(this.IlIlIlIlIlllllllllIl).IlIlIlIlIlllllllllIl(), "size", String.valueOf(llIllIIIIIllIlIIIIlI));
+        Leaf.instance.configManager.saveConfig(HudSetting.llllIIIIlIIIlIlllIll(this.IlIlIlIlIlllllllllIl).getName(), "size", String.valueOf(llIllIIIIIllIlIIIIlI));
         HudSetting.llllIIIIlIIIlIlllIll(this.IlIlIlIlIlllllllllIl).llllIIIIlIIIlIlllIll(llIllIIIIIllIlIIIIlI);
     }
 }

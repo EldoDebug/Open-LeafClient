@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class ToggleSprintSetting1 extends IlIIIlIlIIIllIlIlIIl
+class ToggleSprintSetting1 extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class ToggleSprintSetting1 extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("ToggleSprint", "speedup", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("ToggleSprint", "speedup", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.toggleSprintMod.speedup = this.llllIIIIlIIIlIlllIll;
     }
 }

@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class KillEffectSetting0 extends IlIIIlIlIIIllIlIlIIl
+class KillEffectSetting0 extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class KillEffectSetting0 extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("KillEffect", "bypass", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.llIllIIIIIllIlIIIIlI = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("KillEffect", "bypass", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.killEffectMod.bypass = this.llllIIIIlIIIlIlllIll;
     }
 }

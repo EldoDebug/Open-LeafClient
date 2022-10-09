@@ -23,14 +23,14 @@ public class RenderSetting extends lIIllIIIllllIlllIllI
         final int n2 = (int)Toolkit.getDefaultToolkit().getScreenSize().getHeight();
         Setting.llllIIIIlIIIlIlllIll(g.IlIlIIIllIllIIIIIllI(), (n / g.IlIlIIIllIllIIIIIllI() > g.llllIIIIlIIIlIlllIll()) ? (g.llllIIIIlIIIlIlllIll() / (n / (double)g.IlIlIIIllIllIIIIIllI())) : 1.0, (n2 / g.IlIlIIIllIllIIIIIllI() > g.IlIlIlIlIlllllllllIl()) ? (g.IlIlIlIlIlllllllllIl() / (n2 / (double)g.IlIlIIIllIllIIIIIllI())) : 1.0, (n < 1920) ? (n / 1920.0) : 1.0, (n2 < 1080) ? (n2 / 1080.0) : 1.0);
         LoadFont.minecraftFontRenderer.llllIIIIlIIIlIlllIll(Setting.llllIIIIlIIIlIlllIll());
-        this.IlIlIIIllIllIIIIIllI.add(new FullbrightSetting(this, "Enable FullBright", 1090, 310, 100, 60, Leaf.instance.modManager.IIlIIIIlllIlllllIlII));
-        this.IlIlIIIllIllIIIIIllI.add(new ClearGlassSetting(this, "Enable Clear Glass", 1090, 410, 100, 60, Leaf.instance.modManager.IlIlIllllllllIIIIlII));
-        this.IlIlIIIllIllIIIIIllI.add(new FireOverlaySetting(this, "Hide Entity Burning", 1090, 510, 100, 60, Leaf.instance.modManager.IIIlIIlIIIIlllIlllII));
-        this.IlIlIIIllIllIIIIIllI.add(new EnchantSetting(this, "Disable Enchantment Glint", 1090, 610, 100, 60, Leaf.instance.modManager.IlllllllIIIlIIIlIlII));
-        this.IlIlIIIllIllIIIIIllI.add(new ItemSetting(this, "Enable Animation of Dropped Items", 1090, 710, 100, 60, Leaf.instance.modManager.IIlllIlIIllIlIlIlIIl));
-        this.IlIlIIIllIllIIIIIllI.add(new PlayerListSetting(this, "Hide NameTag Icon", 1090, 310, 100, 60, Leaf.instance.modManager.IlIlIIIIIIlllIlIllIl));
-        this.IlIlIIIllIllIIIIIllI.add(new CapeSetting(this, "Hide Cape Cosmetics", 1090, 410, 100, 60, Leaf.instance.modManager.IIllIIllIIIlIlIIIIlI));
-        this.IlIlIIIllIllIIIIIllI.add(new WingSetting(this, "Hide Wing Cosmetics", 1090, 510, 100, 60, Leaf.instance.modManager.IIIlIIIlIlIIlllIIlll));
+        this.IlIlIIIllIllIIIIIllI.add(new FullbrightSetting(this, "Enable FullBright", 1090, 310, 100, 60, Leaf.instance.modManager.fullbright));
+        this.IlIlIIIllIllIIIIIllI.add(new ClearGlassSetting(this, "Enable Clear Glass", 1090, 410, 100, 60, Leaf.instance.modManager.clearGlass));
+        this.IlIlIIIllIllIIIIIllI.add(new FireOverlaySetting(this, "Hide Entity Burning", 1090, 510, 100, 60, Leaf.instance.modManager.hideFire));
+        this.IlIlIIIllIllIIIIIllI.add(new EnchantSetting(this, "Disable Enchantment Glint", 1090, 610, 100, 60, Leaf.instance.modManager.hideEnchant));
+        this.IlIlIIIllIllIIIIIllI.add(new ItemSetting(this, "Enable Animation of Dropped Items", 1090, 710, 100, 60, Leaf.instance.modManager.item));
+        this.IlIlIIIllIllIIIIIllI.add(new PlayerListSetting(this, "Hide NameTag Icon", 1090, 310, 100, 60, Leaf.instance.modManager.hideIcon));
+        this.IlIlIIIllIllIIIIIllI.add(new CapeSetting(this, "Hide Cape Cosmetics", 1090, 410, 100, 60, Leaf.instance.modManager.hideCape));
+        this.IlIlIIIllIllIIIIIllI.add(new WingSetting(this, "Hide Wing Cosmetics", 1090, 510, 100, 60, Leaf.instance.modManager.hideWing));
         this.IlIlIIIllIllIIIIIllI.add(new HatSetting(this, "Hide Hat Cosmetics", 1090, 610, 100, 60, Leaf.instance.modManager.IlIlIIIlIIlIlIIlllIl));
         this.IllIIlllIIIIlllIIlIl = new IlIlIIIllIllIIIIIllI(this.IlIlIIIllIllIIIIIllI, 1230, 310, 32, 460, 5);
     }

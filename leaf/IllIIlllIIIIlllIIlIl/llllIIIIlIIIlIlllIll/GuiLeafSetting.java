@@ -55,7 +55,7 @@ public class GuiLeafSetting extends llIIlIIIlIIIllIlIIIl
             }
             else {
                 this.lIIIlllIIIllIIIllIII = false;
-                this.llllIIIIlIIIlIlllIll();
+                this.addSetting();
             }
         }
     }
@@ -68,6 +68,6 @@ public class GuiLeafSetting extends llIIlIIIlIIIllIlIIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
+    public void addSetting() {
     }
 }

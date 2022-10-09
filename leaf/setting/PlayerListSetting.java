@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class PlayerListSetting extends IlIIIlIlIIIllIlIlIIl
+class PlayerListSetting extends SettingBase
 {
     final /* synthetic */ RenderSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class PlayerListSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Setting", "hide_icon", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlIlIIIIIIlllIlIllIl = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Setting", "hide_icon", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.hideIcon = this.llllIIIIlIIIlIlllIll;
     }
 }

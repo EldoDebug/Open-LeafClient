@@ -4,7 +4,7 @@ import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 import net.minecraft.client.*;
 
-class ClearGlassSetting extends IlIIIlIlIIIllIlIlIIl
+class ClearGlassSetting extends SettingBase
 {
     final /* synthetic */ RenderSetting IlIlIlIlIlllllllllIl;
     
@@ -14,9 +14,9 @@ class ClearGlassSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Setting", "clear_glass", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlIlIllllllllIIIIlII = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Setting", "clear_glass", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.clearGlass = this.llllIIIIlIIIlIlllIll;
         Minecraft.getMinecraft().llllIIIlIlllIlIIIIIl.IlIIIlIlIIIllIlIlIIl();
     }
 }

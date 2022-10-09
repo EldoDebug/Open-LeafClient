@@ -1,6 +1,7 @@
 package net.minecraft.IIIlIIlIIIIlllIlllII.IlIlIIIllIllIIIIIllI.llIllIIIIIllIlIIIIlI;
 
 import net.minecraft.IlllllllIIIlIIIlIlII.*;
+import com.google.common.base.*;
 import net.minecraft.lIlIlIIIllIIllIIIllI.*;
 
 public class IlIlIIIlIIlIlIIlllIl
@@ -11,87 +12,175 @@ public class IlIlIIIlIIlIlIIlllIl
     public int IlIIIlIlIIIllIlIlIIl;
     public int IlIlIIIllIllIIIIIllI;
     public int IllIIlllIIIIlllIIlIl;
+    private static volatile /* synthetic */ int[] llllIIIlIlllIlIIIIIl;
     
     public IlIlIIIlIIlIlIIlllIl() {
-        // 
-        // This method could not be decompiled.
-        // 
-        // Original Bytecode:
-        // 
-        // 
-        // The error that occurred was:
-        // 
-        // java.lang.reflect.UndeclaredThrowableException: An unhandled checked exception occurred.
-        //     at com.strobel.core.ExceptionUtilities.asRuntimeException(ExceptionUtilities.java:33)
-        //     at com.strobel.assembler.metadata.JarTypeLoader.tryLoadType(JarTypeLoader.java:91)
-        //     at us.deathmarine.luyten.LuytenTypeLoader.tryLoadType(LuytenTypeLoader.java:25)
-        //     at com.strobel.assembler.metadata.MethodDefinition.tryLoadBody(MethodDefinition.java:684)
-        //     at com.strobel.assembler.metadata.MethodDefinition.getBody(MethodDefinition.java:83)
-        //     at com.strobel.decompiler.languages.java.ast.AstMethodBodyBuilder.createMethodBody(AstMethodBodyBuilder.java:202)
-        //     at com.strobel.decompiler.languages.java.ast.AstMethodBodyBuilder.createMethodBody(AstMethodBodyBuilder.java:99)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createMethodBody(AstBuilder.java:782)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createConstructor(AstBuilder.java:713)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.addTypeMembers(AstBuilder.java:549)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createTypeCore(AstBuilder.java:519)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createTypeNoCache(AstBuilder.java:161)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createType(AstBuilder.java:150)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.addType(AstBuilder.java:125)
-        //     at com.strobel.decompiler.languages.java.JavaLanguage.buildAst(JavaLanguage.java:71)
-        //     at com.strobel.decompiler.languages.java.JavaLanguage.decompileType(JavaLanguage.java:59)
-        //     at us.deathmarine.luyten.FileSaver.doSaveJarDecompiled(FileSaver.java:192)
-        //     at us.deathmarine.luyten.FileSaver.access$300(FileSaver.java:45)
-        //     at us.deathmarine.luyten.FileSaver$4.run(FileSaver.java:112)
-        //     at java.lang.Thread.run(Unknown Source)
-        // Caused by: java.util.zip.ZipException: invalid LOC header (bad signature)
-        //     at java.util.zip.ZipFile.read(Native Method)
-        //     at java.util.zip.ZipFile.access$1400(Unknown Source)
-        //     at java.util.zip.ZipFile$ZipFileInputStream.read(Unknown Source)
-        //     at java.util.zip.ZipFile$ZipFileInflaterInputStream.fill(Unknown Source)
-        //     at java.util.zip.InflaterInputStream.read(Unknown Source)
-        //     at com.strobel.assembler.metadata.JarTypeLoader.tryLoadType(JarTypeLoader.java:66)
-        //     ... 18 more
-        // 
-        throw new IllegalStateException("An error occurred while decompiling this method.");
     }
     
-    public IlIlIIIlIIlIlIIlllIl(final int[] p0);
+    public IlIlIIIlIIlIlIIlllIl(final int[] array) {
+        if (array.length == 6) {
+            this.llllIIIIlIIIlIlllIll = array[0];
+            this.IlIlIlIlIlllllllllIl = array[1];
+            this.llIllIIIIIllIlIIIIlI = array[2];
+            this.IlIIIlIlIIIllIlIlIIl = array[3];
+            this.IlIlIIIllIllIIIIIllI = array[4];
+            this.IllIIlllIIIIlllIIlIl = array[5];
+        }
+    }
     
-    public static IlIlIIIlIIlIlIIlllIl llllIIIIlIIIlIlllIll();
+    public static IlIlIIIlIIlIlIIlllIl llllIIIIlIIIlIlllIll() {
+        return new IlIlIIIlIIlIlIIlllIl(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE);
+    }
     
-    public static IlIlIIIlIIlIlIIlllIl llllIIIIlIIIlIlllIll(final int p0, final int p1, final int p2, final int p3, final int p4, final int p5, final int p6, final int p7, final int p8, final lllIllIIIllllllIllll p9);
+    public static IlIlIIIlIIlIlIIlllIl llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3, final int n4, final int n5, final int n6, final int n7, final int n8, final int n9, final lllIllIIIllllllIllll lllIllIIIllllllIllll) {
+        switch (lIIIIlIIIIIlllIllIII()[lllIllIIIllllllIllll.ordinal()]) {
+            case 3: {
+                return new IlIlIIIlIIlIlIIlllIl(n + n4, n2 + n5, n3 - n9 + 1 + n6, n + n7 - 1 + n4, n2 + n8 - 1 + n5, n3 + n6);
+            }
+            case 4: {
+                return new IlIlIIIlIIlIlIIlllIl(n + n4, n2 + n5, n3 + n6, n + n7 - 1 + n4, n2 + n8 - 1 + n5, n3 + n9 - 1 + n6);
+            }
+            case 5: {
+                return new IlIlIIIlIIlIlIIlllIl(n - n9 + 1 + n6, n2 + n5, n3 + n4, n + n6, n2 + n8 - 1 + n5, n3 + n7 - 1 + n4);
+            }
+            case 6: {
+                return new IlIlIIIlIIlIlIIlllIl(n + n6, n2 + n5, n3 + n4, n + n9 - 1 + n6, n2 + n8 - 1 + n5, n3 + n7 - 1 + n4);
+            }
+            default: {
+                return new IlIlIIIlIIlIlIIlllIl(n + n4, n2 + n5, n3 + n6, n + n7 - 1 + n4, n2 + n8 - 1 + n5, n3 + n9 - 1 + n6);
+            }
+        }
+    }
     
-    public static IlIlIIIlIIlIlIIlllIl llllIIIIlIIIlIlllIll(final int p0, final int p1, final int p2, final int p3, final int p4, final int p5);
+    public static IlIlIIIlIIlIlIIlllIl llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3, final int n4, final int n5, final int n6) {
+        return new IlIlIIIlIIlIlIIlllIl(Math.min(n, n4), Math.min(n2, n5), Math.min(n3, n6), Math.max(n, n4), Math.max(n2, n5), Math.max(n3, n6));
+    }
     
-    public IlIlIIIlIIlIlIIlllIl(final IlIlIIIlIIlIlIIlllIl p0);
+    public IlIlIIIlIIlIlIIlllIl(final IlIlIIIlIIlIlIIlllIl ilIlIIIlIIlIlIIlllIl) {
+        this.llllIIIIlIIIlIlllIll = ilIlIIIlIIlIlIIlllIl.llllIIIIlIIIlIlllIll;
+        this.IlIlIlIlIlllllllllIl = ilIlIIIlIIlIlIIlllIl.IlIlIlIlIlllllllllIl;
+        this.llIllIIIIIllIlIIIIlI = ilIlIIIlIIlIlIIlllIl.llIllIIIIIllIlIIIIlI;
+        this.IlIIIlIlIIIllIlIlIIl = ilIlIIIlIIlIlIIlllIl.IlIIIlIlIIIllIlIlIIl;
+        this.IlIlIIIllIllIIIIIllI = ilIlIIIlIIlIlIIlllIl.IlIlIIIllIllIIIIIllI;
+        this.IllIIlllIIIIlllIIlIl = ilIlIIIlIIlIlIIlllIl.IllIIlllIIIIlllIIlIl;
+    }
     
-    public IlIlIIIlIIlIlIIlllIl(final int p0, final int p1, final int p2, final int p3, final int p4, final int p5);
+    public IlIlIIIlIIlIlIIlllIl(final int llllIIIIlIIIlIlllIll, final int ilIlIlIlIlllllllllIl, final int llIllIIIIIllIlIIIIlI, final int ilIIIlIlIIIllIlIlIIl, final int ilIlIIIllIllIIIIIllI, final int illIIlllIIIIlllIIlIl) {
+        this.llllIIIIlIIIlIlllIll = llllIIIIlIIIlIlllIll;
+        this.IlIlIlIlIlllllllllIl = ilIlIlIlIlllllllllIl;
+        this.llIllIIIIIllIlIIIIlI = llIllIIIIIllIlIIIIlI;
+        this.IlIIIlIlIIIllIlIlIIl = ilIIIlIlIIIllIlIlIIl;
+        this.IlIlIIIllIllIIIIIllI = ilIlIIIllIllIIIIIllI;
+        this.IllIIlllIIIIlllIIlIl = illIIlllIIIIlllIIlIl;
+    }
     
-    public IlIlIIIlIIlIlIIlllIl(final f p0, final f p1);
+    public IlIlIIIlIIlIlIIlllIl(final f f, final f f2) {
+        this.llllIIIIlIIIlIlllIll = Math.min(f.lIIIIlIIIIIlllIllIII(), f2.lIIIIlIIIIIlllIllIII());
+        this.IlIlIlIlIlllllllllIl = Math.min(f.lIIIlllIIIllIIIllIII(), f2.lIIIlllIIIllIIIllIII());
+        this.llIllIIIIIllIlIIIIlI = Math.min(f.llIIlIIIlIIIllIlIIIl(), f2.llIIlIIIlIIIllIlIIIl());
+        this.IlIIIlIlIIIllIlIlIIl = Math.max(f.lIIIIlIIIIIlllIllIII(), f2.lIIIIlIIIIIlllIllIII());
+        this.IlIlIIIllIllIIIIIllI = Math.max(f.lIIIlllIIIllIIIllIII(), f2.lIIIlllIIIllIIIllIII());
+        this.IllIIlllIIIIlllIIlIl = Math.max(f.llIIlIIIlIIIllIlIIIl(), f2.llIIlIIIlIIIllIlIIIl());
+    }
     
-    public IlIlIIIlIIlIlIIlllIl(final int p0, final int p1, final int p2, final int p3);
+    public IlIlIIIlIIlIlIIlllIl(final int llllIIIIlIIIlIlllIll, final int llIllIIIIIllIlIIIIlI, final int ilIIIlIlIIIllIlIlIIl, final int illIIlllIIIIlllIIlIl) {
+        this.llllIIIIlIIIlIlllIll = llllIIIIlIIIlIlllIll;
+        this.llIllIIIIIllIlIIIIlI = llIllIIIIIllIlIIIIlI;
+        this.IlIIIlIlIIIllIlIlIIl = ilIIIlIlIIIllIlIlIIl;
+        this.IllIIlllIIIIlllIIlIl = illIIlllIIIIlllIIlIl;
+        this.IlIlIlIlIlllllllllIl = 1;
+        this.IlIlIIIllIllIIIIIllI = 512;
+    }
     
-    public boolean llllIIIIlIIIlIlllIll(final IlIlIIIlIIlIlIIlllIl p0);
+    public boolean llllIIIIlIIIlIlllIll(final IlIlIIIlIIlIlIIlllIl ilIlIIIlIIlIlIIlllIl) {
+        return this.IlIIIlIlIIIllIlIlIIl >= ilIlIIIlIIlIlIIlllIl.llllIIIIlIIIlIlllIll && this.llllIIIIlIIIlIlllIll <= ilIlIIIlIIlIlIIlllIl.IlIIIlIlIIIllIlIlIIl && this.IllIIlllIIIIlllIIlIl >= ilIlIIIlIIlIlIIlllIl.llIllIIIIIllIlIIIIlI && this.llIllIIIIIllIlIIIIlI <= ilIlIIIlIIlIlIIlllIl.IllIIlllIIIIlllIIlIl && this.IlIlIIIllIllIIIIIllI >= ilIlIIIlIIlIlIIlllIl.IlIlIlIlIlllllllllIl && this.IlIlIlIlIlllllllllIl <= ilIlIIIlIIlIlIIlllIl.IlIlIIIllIllIIIIIllI;
+    }
     
-    public boolean llllIIIIlIIIlIlllIll(final int p0, final int p1, final int p2, final int p3);
+    public boolean llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3, final int n4) {
+        return this.IlIIIlIlIIIllIlIlIIl >= n && this.llllIIIIlIIIlIlllIll <= n3 && this.IllIIlllIIIIlllIIlIl >= n2 && this.llIllIIIIIllIlIIIIlI <= n4;
+    }
     
-    public void IlIlIlIlIlllllllllIl(final IlIlIIIlIIlIlIIlllIl p0);
+    public void IlIlIlIlIlllllllllIl(final IlIlIIIlIIlIlIIlllIl ilIlIIIlIIlIlIIlllIl) {
+        this.llllIIIIlIIIlIlllIll = Math.min(this.llllIIIIlIIIlIlllIll, ilIlIIIlIIlIlIIlllIl.llllIIIIlIIIlIlllIll);
+        this.IlIlIlIlIlllllllllIl = Math.min(this.IlIlIlIlIlllllllllIl, ilIlIIIlIIlIlIIlllIl.IlIlIlIlIlllllllllIl);
+        this.llIllIIIIIllIlIIIIlI = Math.min(this.llIllIIIIIllIlIIIIlI, ilIlIIIlIIlIlIIlllIl.llIllIIIIIllIlIIIIlI);
+        this.IlIIIlIlIIIllIlIlIIl = Math.max(this.IlIIIlIlIIIllIlIlIIl, ilIlIIIlIIlIlIIlllIl.IlIIIlIlIIIllIlIlIIl);
+        this.IlIlIIIllIllIIIIIllI = Math.max(this.IlIlIIIllIllIIIIIllI, ilIlIIIlIIlIlIIlllIl.IlIlIIIllIllIIIIIllI);
+        this.IllIIlllIIIIlllIIlIl = Math.max(this.IllIIlllIIIIlllIIlIl, ilIlIIIlIIlIlIIlllIl.IllIIlllIIIIlllIIlIl);
+    }
     
-    public void llllIIIIlIIIlIlllIll(final int p0, final int p1, final int p2);
+    public void llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3) {
+        this.llllIIIIlIIIlIlllIll += n;
+        this.IlIlIlIlIlllllllllIl += n2;
+        this.llIllIIIIIllIlIIIIlI += n3;
+        this.IlIIIlIlIIIllIlIlIIl += n;
+        this.IlIlIIIllIllIIIIIllI += n2;
+        this.IllIIlllIIIIlllIIlIl += n3;
+    }
     
-    public boolean llllIIIIlIIIlIlllIll(final f p0);
+    public boolean llllIIIIlIIIlIlllIll(final f f) {
+        return f.lIIIIlIIIIIlllIllIII() >= this.llllIIIIlIIIlIlllIll && f.lIIIIlIIIIIlllIllIII() <= this.IlIIIlIlIIIllIlIlIIl && f.llIIlIIIlIIIllIlIIIl() >= this.llIllIIIIIllIlIIIIlI && f.llIIlIIIlIIIllIlIIIl() <= this.IllIIlllIIIIlllIIlIl && f.lIIIlllIIIllIIIllIII() >= this.IlIlIlIlIlllllllllIl && f.lIIIlllIIIllIIIllIII() <= this.IlIlIIIllIllIIIIIllI;
+    }
     
-    public f IlIlIlIlIlllllllllIl();
+    public f IlIlIlIlIlllllllllIl() {
+        return new f(this.IlIIIlIlIIIllIlIlIIl - this.llllIIIIlIIIlIlllIll, this.IlIlIIIllIllIIIIIllI - this.IlIlIlIlIlllllllllIl, this.IllIIlllIIIIlllIIlIl - this.llIllIIIIIllIlIIIIlI);
+    }
     
-    public int llIllIIIIIllIlIIIIlI();
+    public int llIllIIIIIllIlIIIIlI() {
+        return this.IlIIIlIlIIIllIlIlIIl - this.llllIIIIlIIIlIlllIll + 1;
+    }
     
-    public int IlIIIlIlIIIllIlIlIIl();
+    public int IlIIIlIlIIIllIlIlIIl() {
+        return this.IlIlIIIllIllIIIIIllI - this.IlIlIlIlIlllllllllIl + 1;
+    }
     
-    public int IlIlIIIllIllIIIIIllI();
+    public int IlIlIIIllIllIIIIIllI() {
+        return this.IllIIlllIIIIlllIIlIl - this.llIllIIIIIllIlIIIIlI + 1;
+    }
     
-    public f IllIIlllIIIIlllIIlIl();
+    public f IllIIlllIIIIlllIIlIl() {
+        return new IlIlIlIlIlllllllllIl(this.llllIIIIlIIIlIlllIll + (this.IlIIIlIlIIIllIlIlIIl - this.llllIIIIlIIIlIlllIll + 1) / 2, this.IlIlIlIlIlllllllllIl + (this.IlIlIIIllIllIIIIIllI - this.IlIlIlIlIlllllllllIl + 1) / 2, this.llIllIIIIIllIlIIIIlI + (this.IllIIlllIIIIlllIIlIl - this.llIllIIIIIllIlIIIIlI + 1) / 2);
+    }
     
     @Override
-    public String toString();
+    public String toString() {
+        return Objects.toStringHelper((Object)this).add("x0", this.llllIIIIlIIIlIlllIll).add("y0", this.IlIlIlIlIlllllllllIl).add("z0", this.llIllIIIIIllIlIIIIlI).add("x1", this.IlIIIlIlIIIllIlIlIIl).add("y1", this.IlIlIIIllIllIIIIIllI).add("z1", this.IllIIlllIIIIlllIIlIl).toString();
+    }
     
-    public IIIlIIIlIlIIlllIIlll llllIIIlIlllIlIIIIIl();
+    public IIIlIIIlIlIIlllIIlll llllIIIlIlllIlIIIIIl() {
+        return new IIIlIIIlIlIIlllIIlll(new int[] { this.llllIIIIlIIIlIlllIll, this.IlIlIlIlIlllllllllIl, this.llIllIIIIIllIlIIIIlI, this.IlIIIlIlIIIllIlIlIIl, this.IlIlIIIllIllIIIIIllI, this.IllIIlllIIIIlllIIlIl });
+    }
+    
+    static /* synthetic */ int[] lIIIIlIIIIIlllIllIII() {
+        final int[] llllIIIlIlllIlIIIIIl = IlIlIIIlIIlIlIIlllIl.llllIIIlIlllIlIIIIIl;
+        if (llllIIIlIlllIlIIIIIl != null) {
+            return llllIIIlIlllIlIIIIIl;
+        }
+        final int[] llllIIIlIlllIlIIIIIl2 = new int[lllIllIIIllllllIllll.values().length];
+        try {
+            llllIIIlIlllIlIIIIIl2[lllIllIIIllllllIllll.llllIIIIlIIIlIlllIll.ordinal()] = 1;
+        }
+        catch (NoSuchFieldError noSuchFieldError) {}
+        try {
+            llllIIIlIlllIlIIIIIl2[lllIllIIIllllllIllll.IllIIlllIIIIlllIIlIl.ordinal()] = 6;
+        }
+        catch (NoSuchFieldError noSuchFieldError2) {}
+        try {
+            llllIIIlIlllIlIIIIIl2[lllIllIIIllllllIllll.llIllIIIIIllIlIIIIlI.ordinal()] = 3;
+        }
+        catch (NoSuchFieldError noSuchFieldError3) {}
+        try {
+            llllIIIlIlllIlIIIIIl2[lllIllIIIllllllIllll.IlIIIlIlIIIllIlIlIIl.ordinal()] = 4;
+        }
+        catch (NoSuchFieldError noSuchFieldError4) {}
+        try {
+            llllIIIlIlllIlIIIIIl2[lllIllIIIllllllIllll.IlIlIlIlIlllllllllIl.ordinal()] = 2;
+        }
+        catch (NoSuchFieldError noSuchFieldError5) {}
+        try {
+            llllIIIlIlllIlIIIIIl2[lllIllIIIllllllIllll.IlIlIIIllIllIIIIIllI.ordinal()] = 5;
+        }
+        catch (NoSuchFieldError noSuchFieldError6) {}
+        return IlIlIIIlIIlIlIIlllIl.llllIIIlIlllIlIIIIIl = llllIIIlIlllIlIIIIIl2;
+    }
 }

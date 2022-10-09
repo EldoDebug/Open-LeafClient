@@ -1,0 +1,14 @@
+package net.minecraft.client.llllIIIlIlllIlIIIIIl;
+
+import net.minecraft.IIIlIIlIIIIlllIlllII.*;
+import net.minecraft.llllIIIIlIIIlIlllIll.*;
+import net.minecraft.llllIIIIlIIIlIlllIll.llIllIIIIIllIlIIIIlI.*;
+
+public class lIlIlIIIllIIllIIIllI implements IIIllIIllIIIIIIlIIlI
+{
+    @Override
+    public IIIllllllIllIIIlllIl llllIIIIlIIIlIlllIll(final int n, final IlllllllIIIlIIIlIlII illlllllIIIlIIIlIlII, final double n2, final double n3, final double n4, final double n5, final double n6, final double n7, final int... array) {
+        final llIIlIIIlIIIllIlIIIl ilIlIlIlIlllllllllIl = llllIIIIlIIIlIlllIll.IlIlIlIlIlllllllllIl(array[0]);
+        return (ilIlIlIlIlllllllllIl.llIllIIIIIllIlIIIIlI().llIllIlIIIIllIlIIllI() == -1) ? null : new llIllIlIIIIllIlIIllI(illlllllIIIlIIIlIlII, n2, n3, n4, n5, n6, n7, ilIlIlIlIlllllllllIl).IlIlIIIllIllIIIIIllI();
+    }
+}

@@ -71,15 +71,15 @@ public class lIIIIlIIIIIlllIllIII
             }
             this.IlIlIlIlIlllllllllIl -= 2;
         }
-        Leaf.instance.saveConfig.saveConfig(this.llllIIIlIlllIlIIIIIl, "x", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.saveConfig.saveConfig(this.llllIIIlIlllIlIIIIIl, "y", String.valueOf(this.IlIlIlIlIlllllllllIl));
+        Leaf.instance.configManager.saveConfig(this.llllIIIlIlllIlIIIIIl, "x", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.configManager.saveConfig(this.llllIIIlIlllIlIIIIIl, "y", String.valueOf(this.IlIlIlIlIlllllllllIl));
     }
     
     public boolean llllIIIIlIIIlIlllIll(final String s, final int n, final int n2) {
         final ArrayList<String> list = new ArrayList<String>();
-        for (final Mod mod : Leaf.instance.modManager.llllIIIIlIIIlIlllIll) {
+        for (final Mod mod : Leaf.instance.modManager.mods) {
             if (mod.lIlIlIIIllIIllIIIllI() && mod.llIllIIIIIllIlIIIIlI().llllIIIIlIIIlIlllIll(n, n2)) {
-                list.add(mod.IlIlIlIlIlllllllllIl());
+                list.add(mod.getName());
             }
         }
         return !list.isEmpty() && list.get(0).equals(this.llllIIIlIlllIlIIIIIl);
@@ -119,8 +119,8 @@ public class lIIIIlIIIIIlllIllIII
             if (!Mouse.isButtonDown(0)) {
                 this.lIIIIlIIIIIlllIllIII = false;
                 this.lIIIlllIIIllIIIllIII = false;
-                Leaf.instance.saveConfig.saveConfig(this.llllIIIlIlllIlIIIIIl, "x", String.valueOf(this.llllIIIIlIIIlIlllIll));
-                Leaf.instance.saveConfig.saveConfig(this.llllIIIlIlllIlIIIIIl, "y", String.valueOf(this.IlIlIlIlIlllllllllIl));
+                Leaf.instance.configManager.saveConfig(this.llllIIIlIlllIlIIIIIl, "x", String.valueOf(this.llllIIIIlIIIlIlllIll));
+                Leaf.instance.configManager.saveConfig(this.llllIIIlIlllIlIIIIIl, "y", String.valueOf(this.IlIlIlIlIlllllllllIl));
             }
         }
     }

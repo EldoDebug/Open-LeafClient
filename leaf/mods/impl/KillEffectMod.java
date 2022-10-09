@@ -10,32 +10,32 @@ import net.minecraft.llllIIIlIlllIlIIIIIl.*;
 
 public class KillEffectMod extends Mod
 {
-    public boolean llllIIIIlIIIlIlllIll;
-    public boolean IlIlIlIlIlllllllllIl;
-    public boolean llIllIIIIIllIlIIIIlI;
-    public String IlIIIlIlIIIllIlIlIIl;
-    public String IlIlIIIllIllIIIIIllI;
-    private int IllIIlllIIIIlllIIlIl;
+    public boolean name;
+    public boolean hideCadaver;
+    public boolean bypass;
+    public String y;
+    public String effectType;
+    private int nazo;
     
     public KillEffectMod() {
-        super("KillEffect", 0, 0, 0, 0, 0, 0, Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "enable")));
-        this.IllIIlllIIIIlllIIlIl = -1;
-        this.llllIIIIlIIIlIlllIll = false;
-        this.IlIIIlIlIIIllIlIlIIl = "";
-        this.IlIlIlIlIlllllllllIl = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "hide_cadaver"));
-        this.llIllIIIIIllIlIIIIlI = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("KillEffect", "bypass"));
-        this.IlIlIIIllIllIIIIIllI = Leaf.instance.saveConfig.loadConfig("KillEffect", "effect");
+        super("KillEffect", 0, 0, 0, 0, 0, 0, Boolean.valueOf(Leaf.instance.configManager.loadConfig("KillEffect", "enable")));
+        this.nazo = -1;
+        this.name = false;
+        this.y = "";
+        this.hideCadaver = Boolean.valueOf(Leaf.instance.configManager.loadConfig("KillEffect", "hide_cadaver"));
+        this.bypass = Boolean.valueOf(Leaf.instance.configManager.loadConfig("KillEffect", "bypass"));
+        this.effectType = Leaf.instance.configManager.loadConfig("KillEffect", "effect");
     }
     
     public void llllIIIIlIIIlIlllIll(final lllIIIIlllllIlIIllIl lllIIIIlllllIlIIllIl) {
         if (!this.IlIlIlIlIlllllllllIl(lllIIIIlllllIlIIllIl)) {
             return;
         }
-        if (this.IlIlIlIlIlllllllllIl) {
+        if (this.hideCadaver) {
             Minecraft.getMinecraft().IIIlIIIlIlIIlllIIlll().llllIIIIlIIIlIlllIll(new IIIlIIIlIlIIlllIIlll(new int[] { lllIIIIlllllIlIIllIl.IlllIIIIlIIIlIlIlIIl() }));
         }
-        final String ilIlIIIllIllIIIIIllI;
-        switch (ilIlIIIllIllIIIIIllI = this.IlIlIIIllIllIIIIIllI) {
+        final String effectType;
+        switch (effectType = this.effectType) {
             case "EXPLOSION": {
                 Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.IlllllllIIIlIIIlIlII.llllIIIIlIIIlIlllIll(IlIllllIIlIIlIlIlIll.llIllIIIIIllIlIIIIlI, lllIIIIlllllIlIIllIl.IIlllIlIIllIlIlIlIIl, lllIIIIlllllIlIIllIl.llIIIlIlIllIIlIlIlII, lllIIIIlllllIlIIllIl.lllllIlIIIlIlIIlllII, 0.0, 0.0, 0.0, new int[0]);
                 Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll("random.explode", 1.0f, 1.0f);
@@ -57,13 +57,13 @@ public class KillEffectMod extends Mod
             default:
                 break;
         }
-        this.IlIIIlIlIIIllIlIlIIl = "";
+        this.y = "";
     }
     
     public void llllIIIIlIIIlIlllIll(final llIllIIIIIllIlIIIIlI llIllIIIIIllIlIIIIlI) {
-        if (this.IlIIIlIlIIIllIlIlIIl.equals(llIllIIIIIllIlIIIIlI.s_())) {
-            final String ilIlIIIllIllIIIIIllI;
-            switch (ilIlIIIllIllIIIIIllI = this.IlIlIIIllIllIIIIIllI) {
+        if (this.y.equals(llIllIIIIIllIlIIIIlI.s_())) {
+            final String effectType;
+            switch (effectType = this.effectType) {
                 case "EXPLOSION": {
                     Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.IlllllllIIIlIIIlIlII.llllIIIIlIIIlIlllIll(IlIllllIIlIIlIlIlIll.llIllIIIIIllIlIIIIlI, llIllIIIIIllIlIIIIlI.IIlllIlIIllIlIlIlIIl, llIllIIIIIllIlIIIIlI.llIIIlIlIllIIlIlIlII, llIllIIIIIllIlIIIIlI.lllllIlIIIlIlIIlllII, 0.0, 0.0, 0.0, new int[0]);
                     Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll("random.explode", 1.0f, 1.0f);
@@ -85,15 +85,15 @@ public class KillEffectMod extends Mod
                 default:
                     break;
             }
-            this.IlIIIlIlIIIllIlIlIIl = "";
+            this.y = "";
         }
     }
     
     boolean IlIlIlIlIlllllllllIl(final lllIIIIlllllIlIIllIl lllIIIIlllllIlIIllIl) {
-        if (this.llllIIIIlIIIlIlllIll) {
+        if (this.name) {
             return false;
         }
-        this.llllIIIIlIIIlIlllIll = true;
-        return lllIIIIlllllIlIIllIl instanceof net.minecraft.llllIIIlIlllIlIIIIIl.llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll && !(lllIIIIlllllIlIIllIl instanceof net.minecraft.client.IlIlIlIlIlllllllllIl.llIllIIIIIllIlIIIIlI) && this.IlIIIlIlIIIllIlIlIIl.equals(lllIIIIlllllIlIIllIl.s_());
+        this.name = true;
+        return lllIIIIlllllIlIIllIl instanceof net.minecraft.llllIIIlIlllIlIIIIIl.llllIIIlIlllIlIIIIIl.llllIIIIlIIIlIlllIll && !(lllIIIIlllllIlIIllIl instanceof net.minecraft.client.IlIlIlIlIlllllllllIl.llIllIIIIIllIlIIIIlI) && this.y.equals(lllIIIIlllllIlIIllIl.s_());
     }
 }

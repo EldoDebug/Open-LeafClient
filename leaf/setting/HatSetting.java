@@ -4,7 +4,7 @@ import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 import net.minecraft.client.*;
 
-class HatSetting extends IlIIIlIlIIIllIlIlIIl
+class HatSetting extends SettingBase
 {
     final /* synthetic */ RenderSetting IlIlIlIlIlllllllllIl;
     
@@ -14,8 +14,8 @@ class HatSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Setting", "hide_hat", String.valueOf(this.llllIIIIlIIIlIlllIll));
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Setting", "hide_hat", String.valueOf(this.llllIIIIlIIIlIlllIll));
         Leaf.instance.modManager.IlIlIIIlIIlIlIIlllIl = this.llllIIIIlIIIlIlllIll;
         Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.IIIIlllIIIIIIlIIIlll();
     }

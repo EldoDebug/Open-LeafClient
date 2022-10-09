@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class ChatSetting2 extends IlIIIlIlIIIllIlIlIIl
+class ChatSetting2 extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class ChatSetting2 extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Chat", "detect", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Chat", "detect", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.chatMod.detect = this.llllIIIIlIIIlIlllIll;
     }
 }

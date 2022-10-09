@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class NickHiderSetting extends IlIIIlIlIIIllIlIlIIl
+class NickHiderSetting extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class NickHiderSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("NickHider", "nick_others", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("NickHider", "nick_others", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.nickHiderMod.nickOther = this.llllIIIIlIIIlIlllIll;
     }
 }

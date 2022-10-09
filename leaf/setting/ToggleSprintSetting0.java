@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class ToggleSprintSetting0 extends IlIIIlIlIIIllIlIlIIl
+class ToggleSprintSetting0 extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class ToggleSprintSetting0 extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("ToggleSprint", "sneak", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlIlIlIlIlllllllllIl.IlIlIlIlIlllllllllIl = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("ToggleSprint", "sneak", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.toggleSprintMod.sneak = this.llllIIIIlIIIlIlllIll;
     }
 }

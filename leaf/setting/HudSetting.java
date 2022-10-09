@@ -29,70 +29,70 @@ public class HudSetting extends lIIllIIIllllIlllIllI
         final int n2 = (int)Toolkit.getDefaultToolkit().getScreenSize().getHeight();
         Setting.llllIIIIlIIIlIlllIll(g.IlIlIIIllIllIIIIIllI(), (n / g.IlIlIIIllIllIIIIIllI() > g.llllIIIIlIIIlIlllIll()) ? (g.llllIIIIlIIIlIlllIll() / (n / (double)g.IlIlIIIllIllIIIIIllI())) : 1.0, (n2 / g.IlIlIIIllIllIIIIIllI() > g.IlIlIlIlIlllllllllIl()) ? (g.IlIlIlIlIlllllllllIl() / (n2 / (double)g.IlIlIIIllIllIIIIIllI())) : 1.0, (n < 1920) ? (n / 1920.0) : 1.0, (n2 < 1080) ? (n2 / 1080.0) : 1.0);
         LoadFont.minecraftFontRenderer.llllIIIIlIIIlIlllIll(Setting.llllIIIIlIIIlIlllIll());
-        final String ilIlIlIlIlllllllllIl = this.IlIlIIIllIllIIIIIllI.IlIlIlIlIlllllllllIl();
-        if (ilIlIlIlIlllllllllIl.equals("FreeLook") || ilIlIlIlIlllllllllIl.equals("Old Animation")) {
+        final String name = this.IlIlIIIllIllIIIIIllI.getName();
+        if (name.equals("FreeLook") || name.equals("Old Animation")) {
             return;
         }
-        if (ilIlIlIlIlllllllllIl.equals("ToggleSprint")) {
-            this.IllIIlllIIIIlllIIlIl.add(new ToggleSprintSetting0(this, "Enable Toggle Sneak", 1120, 650, 100, 60, Leaf.instance.modManager.IlIlIlIlIlllllllllIl.IlIlIlIlIlllllllllIl));
-            this.IllIIlllIIIIlllIIlIl.add(new ToggleSprintSetting1(this, "Enable Flying Boost", 1120, 750, 100, 60, Leaf.instance.modManager.IlIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll));
+        if (name.equals("ToggleSprint")) {
+            this.IllIIlllIIIIlllIIlIl.add(new ToggleSprintSetting0(this, "Enable Toggle Sneak", 1120, 650, 100, 60, Leaf.instance.modManager.toggleSprintMod.sneak));
+            this.IllIIlllIIIIlllIIlIl.add(new ToggleSprintSetting1(this, "Enable Flying Boost", 1120, 750, 100, 60, Leaf.instance.modManager.toggleSprintMod.speedup));
         }
-        else if (ilIlIlIlIlllllllllIl.equals("CPS")) {
-            this.IllIIlllIIIIlllIIlIl.add(new CPSSetting(this, "Enable Right Click CPS", 1120, 650, 100, 60, Leaf.instance.modManager.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll));
+        else if (name.equals("CPS")) {
+            this.IllIIlllIIIIlllIIlIl.add(new CPSSetting(this, "Enable Right Click CPS", 1120, 650, 100, 60, Leaf.instance.modManager.cpsMod.showRight));
         }
         else {
-            if (ilIlIlIlIlllllllllIl.equals("KillEffect")) {
-                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting2(this, "Type of Effects", 920, 250, 300, 90, Arrays.asList("NONE", "BLOOD", "LIGHTNING", "EXPLOSION"), Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.IlIlIIIllIllIIIIIllI));
-                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting1(this, "Animation of Hiding Corpse", 1120, 380, 100, 60, Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.IlIlIlIlIlllllllllIl));
-                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting0(this, "Enable Hypixel Mode", 1120, 480, 100, 60, Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.llIllIIIIIllIlIIIIlI));
+            if (name.equals("KillEffect")) {
+                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting2(this, "Type of Effects", 920, 250, 300, 90, Arrays.asList("NONE", "BLOOD", "LIGHTNING", "EXPLOSION"), Leaf.instance.modManager.killEffectMod.effectType));
+                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting1(this, "Animation of Hiding Corpse", 1120, 380, 100, 60, Leaf.instance.modManager.killEffectMod.hideCadaver));
+                this.IllIIlllIIIIlllIIlIl.add(new KillEffectSetting0(this, "Enable Hypixel Mode", 1120, 480, 100, 60, Leaf.instance.modManager.killEffectMod.bypass));
                 return;
             }
-            if (ilIlIlIlIlllllllllIl.equals("PotionStatus")) {
-                this.IllIIlllIIIIlllIIlIl.add(new PotionStatusSetting(this, "Show Background", 1120, 650, 100, 60, Leaf.instance.modManager.IlIlIIIllIllIIIIIllI.llllIIIIlIIIlIlllIll));
+            if (name.equals("PotionStatus")) {
+                this.IllIIlllIIIIlllIIlIl.add(new PotionStatusSetting(this, "Show Background", 1120, 650, 100, 60, Leaf.instance.modManager.potionStatusMod.background));
             }
             else {
-                if (ilIlIlIlIlllllllllIl.equals("NickHider")) {
-                    this.IllIIlllIIIIlllIIlIl.add(new NickHiderSetting(this, "Nick Other Players", 1120, 250, 100, 60, Leaf.instance.modManager.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll));
+                if (name.equals("NickHider")) {
+                    this.IllIIlllIIIIlllIIlIl.add(new NickHiderSetting(this, "Nick Other Players", 1120, 250, 100, 60, Leaf.instance.modManager.nickHiderMod.nickOther));
                     return;
                 }
-                if (ilIlIlIlIlllllllllIl.equals("HitBox")) {
-                    this.IllIIlllIIIIlllIIlIl.add(new IIIllllllIllIIIlllIl(this, "Red Color of HUD", 960, 250, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getRed(), 0));
-                    this.IllIIlllIIIIlllIIlIl.add(new lIIIIlIIIIIlllIllIII(this, "Green Color of HUD", 960, 350, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getGreen(), 0));
-                    this.IllIIlllIIIIlllIIlIl.add(new lIIIlllIIIllIIIllIII(this, "Blue Color of HUD", 960, 450, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getBlue(), 0));
-                    this.IllIIlllIIIIlllIIlIl.add(new HitBoxSetting(this, "Show Player's Direction", 1120, 550, 100, 60, Leaf.instance.modManager.lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll));
+                if (name.equals("HitBox")) {
+                    this.IllIIlllIIIIlllIIlIl.add(new IIIllllllIllIIIlllIl(this, "Red Color of HUD", 960, 250, 255, 90, this.IlIlIIIllIllIIIIIllI.getColor().getRed(), 0));
+                    this.IllIIlllIIIIlllIIlIl.add(new lIIIIlIIIIIlllIllIII(this, "Green Color of HUD", 960, 350, 255, 90, this.IlIlIIIllIllIIIIIllI.getColor().getGreen(), 0));
+                    this.IllIIlllIIIIlllIIlIl.add(new lIIIlllIIIllIIIllIII(this, "Blue Color of HUD", 960, 450, 255, 90, this.IlIlIIIllIllIIIIIllI.getColor().getBlue(), 0));
+                    this.IllIIlllIIIIlllIIlIl.add(new HitBoxSetting(this, "Show Player's Direction", 1120, 550, 100, 60, Leaf.instance.modManager.hitBoxMod.lookDirection));
                     return;
                 }
-                if (ilIlIlIlIlllllllllIl.equals("ScoreBoard")) {
+                if (name.equals("ScoreBoard")) {
                     this.IllIIlllIIIIlllIIlIl.add(new HudSizeSetting(this, "Size of HUD", 960, 250, 255, 90, this.IlIlIIIllIllIIIIIllI.llIIlIIIlIIIllIlIIIl(), 0));
-                    this.IllIIlllIIIIlllIIlIl.add(new ScoreBoardSetting(this, "Hide Number of Lines", 1120, 350, 100, 60, Leaf.instance.modManager.llIIlIIIlIIIllIlIIIl.llllIIIIlIIIlIlllIll));
+                    this.IllIIlllIIIIlllIIlIl.add(new ScoreBoardSetting(this, "Hide Number of Lines", 1120, 350, 100, 60, Leaf.instance.modManager.scoreBoardMod.number));
                     return;
                 }
-                if (ilIlIlIlIlllllllllIl.equals("NameTag")) {
-                    this.IllIIlllIIIIlllIIlIl.add(new NameTagSetting1(this, "Add Shadow Effects", 1120, 250, 100, 60, Leaf.instance.modManager.llIllIlIIIIllIlIIllI.llllIIIIlIIIlIlllIll));
-                    this.IllIIlllIIIIlllIIlIl.add(new NameTagSetting0(this, "Hide NameTag Background", 1120, 350, 100, 60, Leaf.instance.modManager.llIllIlIIIIllIlIIllI.IlIlIlIlIlllllllllIl));
+                if (name.equals("NameTag")) {
+                    this.IllIIlllIIIIlllIIlIl.add(new NameTagSetting1(this, "Add Shadow Effects", 1120, 250, 100, 60, Leaf.instance.modManager.nameTagMod.shadow));
+                    this.IllIIlllIIIIlllIIlIl.add(new NameTagSetting0(this, "Hide NameTag Background", 1120, 350, 100, 60, Leaf.instance.modManager.nameTagMod.background));
                     return;
                 }
-                if (ilIlIlIlIlllllllllIl.equals("Chat")) {
-                    this.IllIIlllIIIIlllIIlIl.add(new llllIIllllIlIlIIIIll(this, "Red Color of Detected Chat", 960, 250, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getRed(), 40));
-                    this.IllIIlllIIIIlllIIlIl.add(new HudGreenSetting(this, "Green Color of Detected Chat", 960, 350, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getGreen(), 40));
-                    this.IllIIlllIIIIlllIIlIl.add(new IIlllIIlIllIllIlIIll(this, "Blue Color of Detected Chat", 960, 450, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getBlue(), 40));
-                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting2(this, "Detect Your Name", 1120, 550, 100, 60, Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll));
-                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting1(this, "Hide Chat Background", 1120, 650, 100, 60, Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.IlIlIlIlIlllllllllIl));
-                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting0(this, "Block Access to Chat", 1120, 750, 100, 60, Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.llIllIIIIIllIlIIIIlI));
+                if (name.equals("Chat")) {
+                    this.IllIIlllIIIIlllIIlIl.add(new llllIIllllIlIlIIIIll(this, "Red Color of Detected Chat", 960, 250, 255, 90, this.IlIlIIIllIllIIIIIllI.getColor().getRed(), 40));
+                    this.IllIIlllIIIIlllIIlIl.add(new HudGreenSetting(this, "Green Color of Detected Chat", 960, 350, 255, 90, this.IlIlIIIllIllIIIIIllI.getColor().getGreen(), 40));
+                    this.IllIIlllIIIIlllIIlIl.add(new IIlllIIlIllIllIlIIll(this, "Blue Color of Detected Chat", 960, 450, 255, 90, this.IlIlIIIllIllIIIIIllI.getColor().getBlue(), 40));
+                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting2(this, "Detect Your Name", 1120, 550, 100, 60, Leaf.instance.modManager.chatMod.detect));
+                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting1(this, "Hide Chat Background", 1120, 650, 100, 60, Leaf.instance.modManager.chatMod.background));
+                    this.IllIIlllIIIIlllIIlIl.add(new ChatSetting0(this, "Block Access to Chat", 1120, 750, 100, 60, Leaf.instance.modManager.chatMod.access));
                     return;
                 }
-                if (ilIlIlIlIlllllllllIl.equals("Coordinate")) {
-                    this.IllIIlllIIIIlllIIlIl.add(new CoordinateSetting0(this, "Hide the Biome", 1120, 650, 100, 60, Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.llllIIIIlIIIlIlllIll));
-                    this.IllIIlllIIIIlllIIlIl.add(new CoordinateSetting1(this, "Enable Decimal Format", 1120, 750, 100, 60, Leaf.instance.modManager.IIIIlllIIIIIIlIIIlll.IlIlIlIlIlllllllllIl));
+                if (name.equals("Coordinate")) {
+                    this.IllIIlllIIIIlllIIlIl.add(new CoordinateSetting0(this, "Hide the Biome", 1120, 650, 100, 60, Leaf.instance.modManager.coordinateMod.biome));
+                    this.IllIIlllIIIIlllIIlIl.add(new CoordinateSetting1(this, "Enable Decimal Format", 1120, 750, 100, 60, Leaf.instance.modManager.coordinateMod.decimal));
                 }
-                else if (ilIlIlIlIlllllllllIl.equals("BossBar")) {
-                    this.IllIIlllIIIIlllIIlIl.add(new BossBarSetting(this, "Hide Health Bar", 1120, 650, 100, 60, Leaf.instance.modManager.llllIIllllIlIlIIIIll.llllIIIIlIIIlIlllIll));
+                else if (name.equals("BossBar")) {
+                    this.IllIIlllIIIIlllIIlIl.add(new BossBarSetting(this, "Hide Health Bar", 1120, 650, 100, 60, Leaf.instance.modManager.bossBarMod.name));
                 }
             }
         }
-        this.IllIIlllIIIIlllIIlIl.add(new IIIlIIlIIIIlllIlllII(this, "Red Color of HUD", 960, 250, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getRed(), 0));
-        this.IllIIlllIIIIlllIIlIl.add(new IlIlIllllllllIIIIlII(this, "Green Color of HUD", 960, 350, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getGreen(), 0));
-        this.IllIIlllIIIIlllIIlIl.add(new IIlllIlIIllIlIlIlIIl(this, "Blue Color of HUD", 960, 450, 255, 90, this.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getBlue(), 0));
+        this.IllIIlllIIIIlllIIlIl.add(new IIIlIIlIIIIlllIlllII(this, "Red Color of HUD", 960, 250, 255, 90, this.IlIlIIIllIllIIIIIllI.getColor().getRed(), 0));
+        this.IllIIlllIIIIlllIIlIl.add(new IlIlIllllllllIIIIlII(this, "Green Color of HUD", 960, 350, 255, 90, this.IlIlIIIllIllIIIIIllI.getColor().getGreen(), 0));
+        this.IllIIlllIIIIlllIIlIl.add(new IIlllIlIIllIlIlIlIIl(this, "Blue Color of HUD", 960, 450, 255, 90, this.IlIlIIIllIllIIIIIllI.getColor().getBlue(), 0));
         this.IllIIlllIIIIlllIIlIl.add(new llIIIlIlIllIIlIlIlII(this, "Size of HUD", 960, 550, 255, 90, this.IlIlIIIllIllIIIIIllI.llIIlIIIlIIIllIlIIIl(), 0));
     }
     

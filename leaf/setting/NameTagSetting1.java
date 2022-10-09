@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class NameTagSetting1 extends IlIIIlIlIIIllIlIlIIl
+class NameTagSetting1 extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class NameTagSetting1 extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("NameTag", "shadow", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.llIllIlIIIIllIlIIllI.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("NameTag", "shadow", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.nameTagMod.shadow = this.llllIIIIlIIIlIlllIll;
     }
 }

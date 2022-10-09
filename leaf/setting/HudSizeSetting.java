@@ -13,9 +13,9 @@ class HudSizeSetting extends GuiLeafSetting
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
+    public void addSetting() {
         final int llIllIIIIIllIlIIIIlI = Setting.llIllIIIIIllIlIIIIlI(this.llllIIIIlIIIlIlllIll);
-        Leaf.instance.saveConfig.saveConfig(this.hudSetting.IlIlIIIllIllIIIIIllI.IlIlIlIlIlllllllllIl(), "size", String.valueOf(llIllIIIIIllIlIIIIlI));
+        Leaf.instance.configManager.saveConfig(this.hudSetting.IlIlIIIllIllIIIIIllI.getName(), "size", String.valueOf(llIllIIIIIllIlIIIIlI));
         this.hudSetting.IlIlIIIllIllIIIIIllI.llllIIIIlIIIlIlllIll(llIllIIIIIllIlIIIIlI);
     }
 }

@@ -24,7 +24,7 @@ class RenderNazoCosmetic extends IlIIIlIlIIIllIlIlIIl
         }
         GL11.glPushMatrix();
         final lIllllIllIllIIllllll llIllIlIIIIllIlIIllI = ((llllIIIIlIIIlIlllIll)llIllIIIIIllIlIIIIlI).llIllIlIIIIllIlIIllI();
-        final List<String> list = Leaf.instance.downloadPlayerData.IllIIlllIIIIlllIIlIl.get(llIllIlIIIIllIlIIllI);
+        final List<String> list = Leaf.instance.downloadPlayerData.hashMap.get(llIllIlIIIIllIlIIllI);
         Minecraft.getMinecraft().lllIllIIIllllllIllll().llllIIIIlIIIlIlllIll(llIllIlIIIIllIlIIllI);
         this.llllIIIIlIIIlIlllIll.llIllIIIIIllIlIIIIlI.lIIIlllIIIllIIIllIII = Integer.parseInt(list.get(0));
         this.llllIIIIlIIIlIlllIll.llIllIIIIIllIlIIIIlI.llIIlIIIlIIIllIlIIIl = Integer.parseInt(list.get(0));

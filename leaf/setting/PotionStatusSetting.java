@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class PotionStatusSetting extends IlIIIlIlIIIllIlIlIIl
+class PotionStatusSetting extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class PotionStatusSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("PotionStatus", "background", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlIlIIIllIllIIIIIllI.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("PotionStatus", "background", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.potionStatusMod.background = this.llllIIIIlIIIlIlllIll;
     }
 }

@@ -13,9 +13,9 @@ class HudGreenSetting extends GuiLeafSetting
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
+    public void addSetting() {
         final int llIllIIIIIllIlIIIIlI = Setting.llIllIIIIIllIlIIIIlI(this.llllIIIIlIIIlIlllIll);
-        Leaf.instance.saveConfig.saveConfig(this.IlIlIlIlIlllllllllIl.IlIlIIIllIllIIIIIllI.IlIlIlIlIlllllllllIl(), "green", String.valueOf(llIllIIIIIllIlIIIIlI));
-        this.IlIlIlIlIlllllllllIl.IlIlIIIllIllIIIIIllI.llllIIIIlIIIlIlllIll(this.IlIlIlIlIlllllllllIl.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getRed(), llIllIIIIIllIlIIIIlI, this.IlIlIlIlIlllllllllIl.IlIlIIIllIllIIIIIllI.lIIIlllIIIllIIIllIII().getBlue());
+        Leaf.instance.configManager.saveConfig(this.IlIlIlIlIlllllllllIl.IlIlIIIllIllIIIIIllI.getName(), "green", String.valueOf(llIllIIIIIllIlIIIIlI));
+        this.IlIlIlIlIlllllllllIl.IlIlIIIllIllIIIIIllI.llllIIIIlIIIlIlllIll(this.IlIlIlIlIlllllllllIl.IlIlIIIllIllIIIIIllI.getColor().getRed(), llIllIIIIIllIlIIIIlI, this.IlIlIlIlIlllllllllIl.IlIlIIIllIllIIIIIllI.getColor().getBlue());
     }
 }

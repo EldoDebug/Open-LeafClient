@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class ChatSetting1 extends IlIIIlIlIIIllIlIlIIl
+class ChatSetting1 extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class ChatSetting1 extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Chat", "background", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.lIlIlIIIllIIllIIIllI.IlIlIlIlIlllllllllIl = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Chat", "background", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.chatMod.background = this.llllIIIIlIIIlIlllIll;
     }
 }

@@ -37,7 +37,7 @@ public class IlIlIlIlIlllllllllIl extends llIIlIIIlIIIllIlIIIl
         final int n = this.llllIIIlIlllIlIIIIIl ? Setting.llllIIIIlIIIlIlllIll(2) : 0;
         final int n2 = this.llllIIIlIlllIlIIIIIl ? Setting.llllIIIIlIIIlIlllIll(4) : 0;
         net.minecraft.client.llIllIIIIIllIlIIIIlI.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(this.llllIIIIlIIIlIlllIll + Setting.llllIIIIlIIIlIlllIll(60) - n, this.IlIlIlIlIlllllllllIl + Setting.IlIlIlIlIlllllllllIl(110) - n, 0.0f, 0.0f, Setting.llllIIIIlIIIlIlllIll(50) + n2, Setting.IlIlIlIlIlllllllllIl(50) + n2, (float)(Setting.llllIIIIlIIIlIlllIll(50) + n2), (float)(Setting.IlIlIlIlIlllllllllIl(50) + n2));
-        LoadFont.minecraftFontRenderer.llllIIIIlIIIlIlllIll(this.IlIlIIIllIllIIIIIllI.IlIlIlIlIlllllllllIl(), (float)(this.llllIIIIlIIIlIlllIll + this.llIllIIIIIllIlIIIIlI / 2), (float)(this.IlIlIlIlIlllllllllIl + this.IlIIIlIlIIIllIlIlIIl / 4), 0);
+        LoadFont.minecraftFontRenderer.llllIIIIlIIIlIlllIll(this.IlIlIIIllIllIIIIIllI.getName(), (float)(this.llllIIIIlIIIlIlllIll + this.llIllIIIIIllIlIIIIlI / 2), (float)(this.IlIlIlIlIlllllllllIl + this.IlIIIlIlIIIllIlIlIIl / 4), 0);
     }
     
     @Override
@@ -59,10 +59,10 @@ public class IlIlIlIlIlllllllllIl extends llIIlIIIlIIIllIlIIIl
     @Override
     public void llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3) {
         if (n >= this.llllIIIIlIIIlIlllIll && n <= this.llllIIIIlIIIlIlllIll + this.llIllIIIIIllIlIIIIlI && n2 >= this.IlIlIlIlIlllllllllIl && n2 <= this.IlIlIlIlIlllllllllIl + this.IlIIIlIlIIIllIlIlIIl / 2) {
-            this.IlIlIIIllIllIIIIIllI.llllIIIIlIIIlIlllIll();
-            Leaf.instance.saveConfig.saveConfig(this.IlIlIIIllIllIIIIIllI.IlIlIlIlIlllllllllIl(), "enable", String.valueOf(this.IlIlIIIllIllIIIIIllI.lIlIlIIIllIIllIIIllI()));
+            this.IlIlIIIllIllIIIIIllI.toggle();
+            Leaf.instance.configManager.saveConfig(this.IlIlIIIllIllIIIIIllI.getName(), "enable", String.valueOf(this.IlIlIIIllIllIIIIIllI.lIlIlIIIllIIllIIIllI()));
         }
-        else if (n >= this.llllIIIIlIIIlIlllIll && n <= this.llllIIIIlIIIlIlllIll + this.llIllIIIIIllIlIIIIlI && n2 >= this.IlIlIlIlIlllllllllIl + this.IlIIIlIlIIIllIlIlIIl / 2 && n2 <= this.IlIlIlIlIlllllllllIl + this.IlIIIlIlIIIllIlIlIIl && !this.IlIlIIIllIllIIIIIllI.IlIlIlIlIlllllllllIl().equals("FreeLook") && !this.IlIlIIIllIllIIIIIllI.IlIlIlIlIlllllllllIl().equals("Old Animation")) {
+        else if (n >= this.llllIIIIlIIIlIlllIll && n <= this.llllIIIIlIIIlIlllIll + this.llIllIIIIIllIlIIIIlI && n2 >= this.IlIlIlIlIlllllllllIl + this.IlIIIlIlIIIllIlIlIIl / 2 && n2 <= this.IlIlIlIlIlllllllllIl + this.IlIIIlIlIIIllIlIlIIl && !this.IlIlIIIllIllIIIIIllI.getName().equals("FreeLook") && !this.IlIlIIIllIllIIIIIllI.getName().equals("Old Animation")) {
             Minecraft.getMinecraft().llllIIIIlIIIlIlllIll(new HudSetting(this.IlIlIIIllIllIIIIIllI));
         }
     }

@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class HitBoxSetting extends IlIIIlIlIIIllIlIlIIl
+class HitBoxSetting extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class HitBoxSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("HitBox", "look_direction", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.lIIIIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("HitBox", "look_direction", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.hitBoxMod.lookDirection = this.llllIIIIlIIIlIlllIll;
     }
 }

@@ -39,13 +39,13 @@ public class PlayerCosmeticSetting extends lIIllIIIllllIlllIllI
         Map<K, String> map = null;
         final ArrayList<String> list = new ArrayList<String>();
         if (this.lIIIlllIIIllIIIllIII.equals("Cape")) {
-            map = (Map<K, String>)Leaf.instance.downloadPlayerData.IlIlIlIlIlllllllllIl;
+            map = (Map<K, String>)Leaf.instance.downloadPlayerData.capeData;
         }
         else if (this.lIIIlllIIIllIIIllIII.equals("Wing")) {
-            map = (Map<K, String>)Leaf.instance.downloadPlayerData.llIllIIIIIllIlIIIIlI;
+            map = (Map<K, String>)Leaf.instance.downloadPlayerData.wingData;
         }
         else if (this.lIIIlllIIIllIIIllIII.equals("Hat")) {
-            map = (Map<K, String>)Leaf.instance.downloadPlayerData.IlIIIlIlIIIllIlIlIIl;
+            map = (Map<K, String>)Leaf.instance.downloadPlayerData.hatData;
         }
         final String s = map.get("free");
         list.add("None");
@@ -66,7 +66,7 @@ public class PlayerCosmeticSetting extends lIIllIIIllllIlllIllI
                 n3 = 400;
                 n4 = 0;
             }
-            this.IllIIlllIIIIlllIIlIl.add(new PlayerSetting(this, s2, 480, n3, 300, 90, s2.equals(Leaf.instance.saveConfig.loadConfig("Setting", this.lIIIlllIIIllIIIllIII.toLowerCase())), s2));
+            this.IllIIlllIIIIlllIIlIl.add(new PlayerSetting(this, s2, 480, n3, 300, 90, s2.equals(Leaf.instance.configManager.loadConfig("Setting", this.lIIIlllIIIllIIIllIII.toLowerCase())), s2));
             n3 += 100;
             ++n4;
         }

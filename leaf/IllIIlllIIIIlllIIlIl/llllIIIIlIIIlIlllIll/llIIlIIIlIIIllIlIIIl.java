@@ -11,6 +11,6 @@ public abstract class llIIlIIIlIIIllIlIIIl
     
     public abstract void llllIIIIlIIIlIlllIll(final int p0, final int p1, final int p2);
     
-    public void llllIIIIlIIIlIlllIll() {
+    public void addSetting() {
     }
 }

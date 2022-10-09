@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class ScoreBoardSetting extends IlIIIlIlIIIllIlIlIIl
+class ScoreBoardSetting extends SettingBase
 {
     final /* synthetic */ HudSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class ScoreBoardSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("ScoreBoard", "number", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.llIIlIIIlIIIllIlIIIl.llllIIIIlIIIlIlllIll = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("ScoreBoard", "number", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.scoreBoardMod.number = this.llllIIIIlIIIlIlllIll;
     }
 }

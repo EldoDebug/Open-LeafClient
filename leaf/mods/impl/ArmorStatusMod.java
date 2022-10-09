@@ -10,11 +10,11 @@ import net.minecraft.llIllIlIIIIllIlIIllI.*;
 public class ArmorStatusMod extends Mod
 {
     public ArmorStatusMod() {
-        super("ArmorStatus", Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ArmorStatus", "x")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ArmorStatus", "y")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ArmorStatus", "red")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ArmorStatus", "green")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ArmorStatus", "blue")), Integer.valueOf(Leaf.instance.saveConfig.loadConfig("ArmorStatus", "size")), Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ArmorStatus", "enable")));
+        super("ArmorStatus", Integer.parseInt(Leaf.instance.configManager.loadConfig("ArmorStatus", "x")), Integer.parseInt(Leaf.instance.configManager.loadConfig("ArmorStatus", "y")), Integer.parseInt(Leaf.instance.configManager.loadConfig("ArmorStatus", "red")), Integer.parseInt(Leaf.instance.configManager.loadConfig("ArmorStatus", "green")), Integer.parseInt(Leaf.instance.configManager.loadConfig("ArmorStatus", "blue")), Integer.valueOf(Leaf.instance.configManager.loadConfig("ArmorStatus", "size")), Boolean.valueOf(Leaf.instance.configManager.loadConfig("ArmorStatus", "enable")));
     }
     
     @Override
-    public void IlIlIIIllIIllIlllllI() {
+    public void render() {
         GL11.glPushMatrix();
         GL11.glTranslatef((float)(this.IlIIIlIlIIIllIlIlIIl() + 2), (float)(this.IlIlIIIllIllIIIIIllI() + 2), 0.0f);
         GL11.glScalef(this.llIllIlIIIIllIlIIllI(), this.llIllIlIIIIllIlIIllI(), 1.0f);
@@ -22,7 +22,7 @@ public class ArmorStatusMod extends Mod
         int n = this.IlIlIIIllIllIIIIIllI() + 8;
         for (int i = 3; i >= 0; --i) {
             if (Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.lIlIlIIIllIIllIIIllI.llIllIIIIIllIlIIIIlI(i) != null) {
-                Minecraft.getMinecraft().lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll(new StringBuilder(String.valueOf(Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.lIlIlIIIllIIllIIIllI.llIllIIIIIllIlIIIIlI(i).lIIIlllIIIllIIIllIII() - Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.lIlIlIIIllIIllIIIllI.llIllIIIIIllIlIIIIlI(i).llllIIIlIlllIlIIIIIl())).toString(), (float)(this.IlIIIlIlIIIllIlIlIIl() - 16), (float)(n + 4), this.lIIIIlIIIIIlllIllIII());
+                Minecraft.getMinecraft().lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll(new StringBuilder(String.valueOf(Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.lIlIlIIIllIIllIIIllI.llIllIIIIIllIlIIIIlI(i).lIIIlllIIIllIIIllIII() - Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.lIlIlIIIllIIllIIIllI.llIllIIIIIllIlIIIIlI(i).llllIIIlIlllIlIIIIIl())).toString(), (float)(this.IlIIIlIlIIIllIlIlIIl() - 16), (float)(n + 4), this.getIntColor());
                 Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.llIIlIIIlIIIllIlIIIl().IlIlIlIlIlllllllllIl(Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.lIlIlIIIllIIllIIIllI.llIllIIIIIllIlIIIIlI(i), this.IlIIIlIlIIIllIlIlIIl() + 8, n);
                 Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.llIIlIIIlIIIllIlIIIl().llllIIIIlIIIlIlllIll(Minecraft.getMinecraft().lIlIlIIIllIIllIIIllI, Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.lIlIlIIIllIIllIIIllI.llIllIIIIIllIlIIIIlI(i), this.IlIIIlIlIIIllIlIlIIl() + 8, n);
                 GL11.glDisable(2896);
@@ -33,7 +33,7 @@ public class ArmorStatusMod extends Mod
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll(final int n, final int n2) {
+    public void renderDummy(final int n, final int n2) {
         GL11.glPushMatrix();
         GL11.glTranslatef((float)(this.IlIIIlIlIIIllIlIlIIl() + 2), (float)(this.IlIlIIIllIllIIIIIllI() + 2), 0.0f);
         GL11.glScalef(this.llIllIlIIIIllIlIIllI(), this.llIllIlIIIIllIlIIllI(), 1.0f);
@@ -48,12 +48,12 @@ public class ArmorStatusMod extends Mod
     }
     
     @Override
-    public int IllIIlllIIIIlllIIlIl() {
+    public int getWidth() {
         return 32;
     }
     
     @Override
-    public int llllIIIlIlllIlIIIIIl() {
+    public int getHeight() {
         return 85;
     }
 }

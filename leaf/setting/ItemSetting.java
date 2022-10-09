@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class ItemSetting extends IlIIIlIlIIIllIlIlIIl
+class ItemSetting extends SettingBase
 {
     final /* synthetic */ RenderSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class ItemSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Setting", "item", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IIlllIlIIllIlIlIlIIl = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Setting", "item", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.item = this.llllIIIIlIIIlIlllIll;
     }
 }

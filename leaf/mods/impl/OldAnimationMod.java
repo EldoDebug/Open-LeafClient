@@ -6,6 +6,6 @@ import leaf.*;
 public class OldAnimationMod extends Mod
 {
     public OldAnimationMod() {
-        super("Old Animation", 0, 0, 0, 0, 0, 0, Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("Animation", "enable")));
+        super("Old Animation", 0, 0, 0, 0, 0, 0, Boolean.valueOf(Leaf.instance.configManager.loadConfig("Animation", "enable")));
     }
 }

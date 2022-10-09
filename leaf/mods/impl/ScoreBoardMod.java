@@ -11,19 +11,19 @@ import java.util.*;
 
 public class ScoreBoardMod extends Mod
 {
-    public boolean llllIIIIlIIIlIlllIll;
+    public boolean number;
     
     public ScoreBoardMod() {
-        super("ScoreBoard", Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "x")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "y")), 0, 0, 0, Integer.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "size")), Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "enable")));
-        this.llllIIIIlIIIlIlllIll = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("ScoreBoard", "number"));
+        super("ScoreBoard", Integer.parseInt(Leaf.instance.configManager.loadConfig("ScoreBoard", "x")), Integer.parseInt(Leaf.instance.configManager.loadConfig("ScoreBoard", "y")), 0, 0, 0, Integer.valueOf(Leaf.instance.configManager.loadConfig("ScoreBoard", "size")), Boolean.valueOf(Leaf.instance.configManager.loadConfig("ScoreBoard", "enable")));
+        this.number = Boolean.valueOf(Leaf.instance.configManager.loadConfig("ScoreBoard", "number"));
     }
     
     @Override
-    public void IlIlIIIllIIllIlllllI() {
+    public void render() {
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll(final int n, final int n2) {
+    public void renderDummy(final int n, final int n2) {
         GL11.glPushMatrix();
         GL11.glTranslatef((float)(this.IlIIIlIlIIIllIlIlIIl() + 2), (float)(this.IlIlIIIllIllIIIIIllI() + 2), 0.0f);
         GL11.glScalef(this.llIllIlIIIIllIlIIllI(), this.llIllIlIIIIllIlIIllI(), 1.0f);
@@ -34,16 +34,16 @@ public class ScoreBoardMod extends Mod
     }
     
     @Override
-    public int IllIIlllIIIIlllIIlIl() {
+    public int getWidth() {
         return 100;
     }
     
     @Override
-    public int llllIIIlIlllIlIIIIIl() {
+    public int getHeight() {
         return 100;
     }
     
-    public void llllIIIIlIIIlIlllIll(final lIIIIlIIIIIlllIllIII liiiIlIIIIIlllIllIII, final IlIlIlIlIlllllllllIl ilIlIlIlIlllllllllIl) {
+    public void llllIIIIlIIIlIlllIll(final lIIIIlIIIIIlllIllIII liiiIlIIIIIlllIllIII, final FontRenderer fontRenderer) {
         GL11.glPushMatrix();
         GL11.glTranslatef((float)(this.IlIIIlIlIIIllIlIlIIl() + 2), (float)(this.IlIlIIIllIllIIIIIllI() + 2), 0.0f);
         GL11.glScalef(this.llIllIlIIIIllIlIIllI(), this.llIllIlIIIIllIlIIllI(), 1.0f);
@@ -51,11 +51,11 @@ public class ScoreBoardMod extends Mod
         final llIIlIIIlIIIllIlIIIl llllIIIIlIIIlIlllIll = liiiIlIIIIIlllIllIII.llllIIIIlIIIlIlllIll();
         final Collection llllIIIIlIIIlIlllIll2 = llllIIIIlIIIlIlllIll.llllIIIIlIIIlIlllIll(liiiIlIIIIIlllIllIII);
         if (llllIIIIlIIIlIlllIll2.size() <= 15) {
-            int n = ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(liiiIlIIIIIlllIllIII.IlIIIlIlIIIllIlIlIIl());
+            int n = fontRenderer.llllIIIIlIIIlIlllIll(liiiIlIIIIIlllIllIII.IlIIIlIlIIIllIlIlIIl());
             for (final IlIIIlIlIIIllIlIlIIl ilIIIlIlIIIllIlIlIIl : llllIIIIlIIIlIlllIll2) {
-                n = Math.max(n, ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(String.valueOf(net.minecraft.lllIIIIlllllIlIIllIl.lIIIlllIIIllIIIllIII.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll.IllIIlllIIIIlllIIlIl(ilIIIlIlIIIllIlIlIIl.IlIIIlIlIIIllIlIlIIl()), ilIIIlIlIIIllIlIlIIl.IlIIIlIlIIIllIlIlIIl())) + ": " + IlllIIIIlIIIlIlIlIIl.IlIlIIIllIIllIlllllI + ilIIIlIlIIIllIlIlIIl.IlIlIlIlIlllllllllIl()));
+                n = Math.max(n, fontRenderer.llllIIIIlIIIlIlllIll(String.valueOf(net.minecraft.lllIIIIlllllIlIIllIl.lIIIlllIIIllIIIllIII.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll.IllIIlllIIIIlllIIlIl(ilIIIlIlIIIllIlIlIIl.IlIIIlIlIIIllIlIlIIl()), ilIIIlIlIIIllIlIlIIl.IlIIIlIlIIIllIlIlIIl())) + ": " + IlllIIIIlIIIlIlIlIIl.IlIlIIIllIIllIlllllI + ilIIIlIlIIIllIlIlIIl.IlIlIlIlIlllllllllIl()));
             }
-            final int n2 = this.IlIlIIIllIllIIIIIllI() + (llllIIIIlIIIlIlllIll2.size() + 1) * ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll;
+            final int n2 = this.IlIlIIIllIllIIIIIllI() + (llllIIIIlIIIlIlllIll2.size() + 1) * fontRenderer.llllIIIIlIIIlIlllIll;
             int ilIIIlIlIIIllIlIlIIl2 = this.IlIIIlIlIIIllIlIlIIl();
             int n3 = 0;
             int n4 = ilIIIlIlIIIllIlIlIIl2 + n + 8;
@@ -68,18 +68,18 @@ public class ScoreBoardMod extends Mod
             for (final IlIIIlIlIIIllIlIlIIl ilIIIlIlIIIllIlIlIIl3 : llllIIIIlIIIlIlllIll2) {
                 ++n3;
                 final String llllIIIIlIIIlIlllIll3 = net.minecraft.lllIIIIlllllIlIIllIl.lIIIlllIIIllIIIllIII.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll.IllIIlllIIIIlllIIlIl(ilIIIlIlIIIllIlIlIIl3.IlIIIlIlIIIllIlIlIIl()), ilIIIlIlIIIllIlIlIIl3.IlIIIlIlIIIllIlIlIIl());
-                final int n7 = n2 - n3 * ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll;
-                net.minecraft.client.llIllIIIIIllIlIIIIlI.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl2 - 2, n7, n4, n7 + ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll, 1342177280);
-                ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll3, ilIIIlIlIIIllIlIlIIl2, n7, 553648127);
-                if (!this.llllIIIIlIIIlIlllIll) {
+                final int n7 = n2 - n3 * fontRenderer.llllIIIIlIIIlIlllIll;
+                llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl2 - 2, n7, n4, n7 + fontRenderer.llllIIIIlIIIlIlllIll, 1342177280);
+                fontRenderer.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll3, ilIIIlIlIIIllIlIlIIl2, n7, 553648127);
+                if (!this.number) {
                     final String string = new StringBuilder().append(IlllIIIIlIIIlIlIlIIl.IlIlIIIllIIllIlllllI).append(ilIIIlIlIIIllIlIlIIl3.IlIlIlIlIlllllllllIl()).toString();
-                    ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(string, n4 - ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(string), n7, 553648127);
+                    fontRenderer.llllIIIIlIIIlIlllIll(string, n4 - fontRenderer.llllIIIIlIIIlIlllIll(string), n7, 553648127);
                 }
                 if (n3 == llllIIIIlIIIlIlllIll2.size()) {
                     final String ilIIIlIlIIIllIlIlIIl4 = liiiIlIIIIIlllIllIII.IlIIIlIlIIIllIlIlIIl();
-                    net.minecraft.client.llIllIIIIIllIlIIIIlI.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl2 - 2, n7 - ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll - 1, n4, n7 - 1, 1610612736);
-                    net.minecraft.client.llIllIIIIIllIlIIIIlI.llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl2 - 2, n7 - 1, n4, n7, 1342177280);
-                    ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl4, ilIIIlIlIIIllIlIlIIl2 + n / 2 - ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl4) / 2, n7 - ilIlIlIlIlllllllllIl.llllIIIIlIIIlIlllIll, 553648127);
+                    llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl2 - 2, n7 - fontRenderer.llllIIIIlIIIlIlllIll - 1, n4, n7 - 1, 1610612736);
+                    llIllIIIIIllIlIIIIlI.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl2 - 2, n7 - 1, n4, n7, 1342177280);
+                    fontRenderer.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl4, ilIIIlIlIIIllIlIlIIl2 + n / 2 - fontRenderer.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl4) / 2, n7 - fontRenderer.llllIIIIlIIIlIlllIll, 553648127);
                 }
             }
         }

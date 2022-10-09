@@ -12,15 +12,15 @@ import java.util.*;
 
 public class PotionStatusMod extends Mod
 {
-    public boolean llllIIIIlIIIlIlllIll;
+    public boolean background;
     
     public PotionStatusMod() {
-        super("PotionStatus", Integer.parseInt(Leaf.instance.saveConfig.loadConfig("PotionStatus", "x")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("PotionStatus", "y")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("PotionStatus", "red")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("PotionStatus", "green")), Integer.parseInt(Leaf.instance.saveConfig.loadConfig("PotionStatus", "blue")), Integer.valueOf(Leaf.instance.saveConfig.loadConfig("PotionStatus", "size")), Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("PotionStatus", "enable")));
-        this.llllIIIIlIIIlIlllIll = Boolean.valueOf(Leaf.instance.saveConfig.loadConfig("PotionStatus", "background"));
+        super("PotionStatus", Integer.parseInt(Leaf.instance.configManager.loadConfig("PotionStatus", "x")), Integer.parseInt(Leaf.instance.configManager.loadConfig("PotionStatus", "y")), Integer.parseInt(Leaf.instance.configManager.loadConfig("PotionStatus", "red")), Integer.parseInt(Leaf.instance.configManager.loadConfig("PotionStatus", "green")), Integer.parseInt(Leaf.instance.configManager.loadConfig("PotionStatus", "blue")), Integer.valueOf(Leaf.instance.configManager.loadConfig("PotionStatus", "size")), Boolean.valueOf(Leaf.instance.configManager.loadConfig("PotionStatus", "enable")));
+        this.background = Boolean.valueOf(Leaf.instance.configManager.loadConfig("PotionStatus", "background"));
     }
     
     @Override
-    public void IlIlIIIllIIllIlllllI() {
+    public void render() {
         GL11.glPushMatrix();
         GL11.glTranslatef((float)(this.IlIIIlIlIIIllIlIlIIl() + 2), (float)(this.IlIlIIIllIllIIIIIllI() + 2), 0.0f);
         GL11.glScalef(this.llIllIlIIIIllIlIIllI(), this.llIllIlIIIIllIlIIllI(), 1.0f);
@@ -34,7 +34,7 @@ public class PotionStatusMod extends Mod
                 final llllIIIIlIIIlIlllIll llllIIIIlIIIlIlllIll = net.minecraft.llllIIllllIlIlIIIIll.llllIIIIlIIIlIlllIll.llllIIIIlIIIlIlllIll[ilIIIlIlIIIllIlIlIIl2.llllIIIIlIIIlIlllIll()];
                 lllllIlIIIlIlIIlllII.llIllIIIIIllIlIIIIlI(1.0f, 1.0f, 1.0f, 1.0f);
                 Minecraft.getMinecraft().lllIllIIIllllllIllll().llllIIIIlIIIlIlllIll(new lIllllIllIllIIllllll("textures/gui/container/inventory.png"));
-                if (this.llllIIIIlIIIlIlllIll) {
+                if (this.background) {
                     Minecraft.getMinecraft().lllIIIIlllllIlIIllIl.IlIlIlIlIlllllllllIl(ilIIIlIlIIIllIlIlIIl, ilIlIIIllIllIIIIIllI, 0, 166, 140, 32);
                 }
                 if (llllIIIIlIIIlIlllIll.IlIlIIIllIllIIIIIllI()) {
@@ -54,12 +54,12 @@ public class PotionStatusMod extends Mod
                 else if (ilIIIlIlIIIllIlIlIIl2.llIllIIIIIllIlIIIIlI() == 4) {
                     s = String.valueOf(s) + " V";
                 }
-                Minecraft.getMinecraft().lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll(s, (float)(ilIIIlIlIIIllIlIlIIl + 28), (float)(ilIlIIIllIllIIIIIllI + 6), this.lIIIIlIIIIIlllIllIII());
+                Minecraft.getMinecraft().lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll(s, (float)(ilIIIlIlIIIllIlIlIIl + 28), (float)(ilIlIIIllIllIIIIIllI + 6), this.getIntColor());
                 String llllIIIIlIIIlIlllIll2 = net.minecraft.llllIIllllIlIlIIIIll.llllIIIIlIIIlIlllIll.llllIIIIlIIIlIlllIll(ilIIIlIlIIIllIlIlIIl2);
                 if (ilIIIlIlIIIllIlIlIIl2.IlIlIlIlIlllllllllIl() <= 200 && ilIIIlIlIIIllIlIlIIl2.IlIlIlIlIlllllllllIl() % 20 >= 10) {
                     llllIIIIlIIIlIlllIll2 = "";
                 }
-                Minecraft.getMinecraft().lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll2, (float)(ilIIIlIlIIIllIlIlIIl + 28), (float)(ilIlIIIllIllIIIIIllI + 16), this.lIIIIlIIIIIlllIllIII());
+                Minecraft.getMinecraft().lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll(llllIIIIlIIIlIlllIll2, (float)(ilIIIlIlIIIllIlIlIIl + 28), (float)(ilIlIIIllIllIIIIIllI + 16), this.getIntColor());
                 ilIlIIIllIllIIIIIllI += 33;
             }
         }
@@ -67,23 +67,23 @@ public class PotionStatusMod extends Mod
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll(final int n, final int n2) {
+    public void renderDummy(final int n, final int n2) {
         GL11.glPushMatrix();
         GL11.glTranslatef((float)(this.IlIIIlIlIIIllIlIlIIl() + 2), (float)(this.IlIlIIIllIllIIIIIllI() + 2), 0.0f);
         GL11.glScalef(this.llIllIlIIIIllIlIIllI(), this.llIllIlIIIIllIlIIllI(), 1.0f);
         GL11.glTranslatef((float)(-(this.IlIIIlIlIIIllIlIlIIl() + 2)), (float)(-(this.IlIlIIIllIllIIIIIllI() + 2)), 0.0f);
-        Minecraft.getMinecraft().lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll("PotionStatus", (float)(this.IlIIIlIlIIIllIlIlIIl() + 30), (float)(this.IlIlIIIllIllIIIIIllI() + 14), this.lIIIIlIIIIIlllIllIII());
+        Minecraft.getMinecraft().lIlIlIIIllIIllIIIllI.llllIIIIlIIIlIlllIll("PotionStatus", (float)(this.IlIIIlIlIIIllIlIlIIl() + 30), (float)(this.IlIlIIIllIllIIIIIllI() + 14), this.getIntColor());
         GL11.glPopMatrix();
         this.llIllIIIIIllIlIIIIlI().IlIlIlIlIlllllllllIl(n, n2);
     }
     
     @Override
-    public int IllIIlllIIIIlllIIlIl() {
+    public int getWidth() {
         return 122;
     }
     
     @Override
-    public int llllIIIlIlllIlIIIIIl() {
+    public int getHeight() {
         return 35;
     }
 }

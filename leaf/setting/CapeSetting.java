@@ -4,7 +4,7 @@ import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 import net.minecraft.client.*;
 
-class CapeSetting extends IlIIIlIlIIIllIlIlIIl
+class CapeSetting extends SettingBase
 {
     final /* synthetic */ RenderSetting IlIlIlIlIlllllllllIl;
     
@@ -14,9 +14,9 @@ class CapeSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Setting", "hide_cape", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IIllIIllIIIlIlIIIIlI = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Setting", "hide_cape", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.hideCape = this.llllIIIIlIIIlIlllIll;
         Minecraft.getMinecraft().lIIIIlIIIIIlllIllIII.IIIIlllIIIIIIlIIIlll();
     }
 }

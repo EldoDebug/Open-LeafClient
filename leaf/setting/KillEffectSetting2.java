@@ -14,8 +14,8 @@ class KillEffectSetting2 extends llllIIIIlIIIlIlllIll
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("KillEffect", "effect", this.IlIlIlIlIlllllllllIl.get(this.llIllIIIIIllIlIIIIlI));
-        Leaf.instance.modManager.IlIIIlIlIIIllIlIlIIl.IlIlIIIllIllIIIIIllI = this.IlIlIlIlIlllllllllIl.get(this.llIllIIIIIllIlIIIIlI);
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("KillEffect", "effect", this.IlIlIlIlIlllllllllIl.get(this.llIllIIIIIllIlIIIIlI));
+        Leaf.instance.modManager.killEffectMod.effectType = this.IlIlIlIlIlllllllllIl.get(this.llIllIIIIIllIlIIIIlI);
     }
 }

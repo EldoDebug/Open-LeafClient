@@ -3,7 +3,7 @@ package leaf.setting;
 import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 
-class EnchantSetting extends IlIIIlIlIIIllIlIlIIl
+class EnchantSetting extends SettingBase
 {
     final /* synthetic */ RenderSetting IlIlIlIlIlllllllllIl;
     
@@ -13,8 +13,8 @@ class EnchantSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Setting", "hide_enchant", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IlllllllIIIlIIIlIlII = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Setting", "hide_enchant", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.hideEnchant = this.llllIIIIlIIIlIlllIll;
     }
 }

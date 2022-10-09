@@ -4,7 +4,7 @@ import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 import leaf.*;
 import net.minecraft.client.*;
 
-class FullbrightSetting extends IlIIIlIlIIIllIlIlIIl
+class FullbrightSetting extends SettingBase
 {
     final /* synthetic */ RenderSetting IlIlIlIlIlllllllllIl;
     
@@ -14,9 +14,9 @@ class FullbrightSetting extends IlIIIlIlIIIllIlIlIIl
     }
     
     @Override
-    public void llllIIIIlIIIlIlllIll() {
-        Leaf.instance.saveConfig.saveConfig("Setting", "fullbright", String.valueOf(this.llllIIIIlIIIlIlllIll));
-        Leaf.instance.modManager.IIlIIIIlllIlllllIlII = this.llllIIIIlIIIlIlllIll;
+    public void addSetting() {
+        Leaf.instance.configManager.saveConfig("Setting", "fullbright", String.valueOf(this.llllIIIIlIIIlIlllIll));
+        Leaf.instance.modManager.fullbright = this.llllIIIIlIIIlIlllIll;
         Minecraft.getMinecraft().llllIIIlIlllIlIIIIIl.IlIIIlIlIIIllIlIlIIl();
     }
 }

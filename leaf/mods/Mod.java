@@ -5,39 +5,39 @@ import leaf.IllIIlllIIIIlllIIlIl.llllIIIIlIIIlIlllIll.*;
 
 public class Mod
 {
-    private String llllIIIIlIIIlIlllIll;
-    private Color IlIlIlIlIlllllllllIl;
-    private int llIllIIIIIllIlIIIIlI;
-    private int IlIIIlIlIIIllIlIlIIl;
-    private int IlIlIIIllIllIIIIIllI;
-    private int IllIIlllIIIIlllIIlIl;
-    private float llllIIIlIlllIlIIIIIl;
-    private boolean lIIIIlIIIIIlllIllIII;
+    private String name;
+    private Color color;
+    private int x;
+    private int y;
+    private int intColor;
+    private int widthMiss;
+    private float heightMiss;
+    private boolean toggled;
     private lIIIIlIIIIIlllIllIII lIIIlllIIIllIIIllIII;
     
-    public Mod(final String llllIIIIlIIIlIlllIll, final int llIllIIIIIllIlIIIIlI, final int ilIIIlIlIIIllIlIlIIl, final int n, final int n2, final int n3, final int illIIlllIIIIlllIIlIl, final boolean liiiIlIIIIIlllIllIII) {
-        this.llllIIIIlIIIlIlllIll = llllIIIIlIIIlIlllIll;
-        this.llIllIIIIIllIlIIIIlI = llIllIIIIIllIlIIIIlI;
-        this.IlIIIlIlIIIllIlIlIIl = ilIIIlIlIIIllIlIlIIl;
-        this.IllIIlllIIIIlllIIlIl = illIIlllIIIIlllIIlIl;
-        this.llllIIIlIlllIlIIIIIl = illIIlllIIIIlllIIlIl / 127.5f;
-        this.lIIIlllIIIllIIIllIII = new lIIIIlIIIIIlllIllIII(llIllIIIIIllIlIIIIlI, ilIIIlIlIIIllIlIlIIl, this.IllIIlllIIIIlllIIlIl(), this.llllIIIlIlllIlIIIIIl(), llllIIIIlIIIlIlllIll);
-        this.IlIlIlIlIlllllllllIl = new Color(n, n2, n3);
-        this.IlIlIIIllIllIIIIIllI = this.IlIlIlIlIlllllllllIl.getRGB();
-        this.lIIIIlIIIIIlllIllIII = liiiIlIIIIIlllIllIII;
+    public Mod(final String name, final int x, final int y, final int n, final int n2, final int n3, final int widthMiss, final boolean toggled) {
+        this.name = name;
+        this.x = x;
+        this.y = y;
+        this.widthMiss = widthMiss;
+        this.heightMiss = widthMiss / 127.5f;
+        this.lIIIlllIIIllIIIllIII = new lIIIIlIIIIIlllIllIII(x, y, this.getWidth(), this.getHeight(), name);
+        this.color = new Color(n, n2, n3);
+        this.intColor = this.color.getRGB();
+        this.toggled = toggled;
     }
     
-    public void llllIIIIlIIIlIlllIll() {
-        this.lIIIIlIIIIIlllIllIII = !this.lIIIIlIIIIIlllIllIII;
+    public void toggle() {
+        this.toggled = !this.toggled;
     }
     
     public void llllIIIIlIIIlIlllIll(final int n, final int n2, final int n3) {
-        this.IlIlIlIlIlllllllllIl = new Color(n, n2, n3);
-        this.IlIlIIIllIllIIIIIllI = this.IlIlIlIlIlllllllllIl.getRGB();
+        this.color = new Color(n, n2, n3);
+        this.intColor = this.color.getRGB();
     }
     
-    public String IlIlIlIlIlllllllllIl() {
-        return this.llllIIIIlIIIlIlllIll;
+    public String getName() {
+        return this.name;
     }
     
     public lIIIIlIIIIIlllIllIII llIllIIIIIllIlIIIIlI() {
@@ -52,42 +52,42 @@ public class Mod
         return this.lIIIlllIIIllIIIllIII.IlIlIlIlIlllllllllIl();
     }
     
-    public int IllIIlllIIIIlllIIlIl() {
+    public int getWidth() {
         return 0;
     }
     
-    public int llllIIIlIlllIlIIIIIl() {
+    public int getHeight() {
         return 0;
     }
     
-    public int lIIIIlIIIIIlllIllIII() {
-        return this.IlIlIIIllIllIIIIIllI;
+    public int getIntColor() {
+        return this.intColor;
     }
     
-    public Color lIIIlllIIIllIIIllIII() {
-        return this.IlIlIlIlIlllllllllIl;
+    public Color getColor() {
+        return this.color;
     }
     
-    public void llllIIIIlIIIlIlllIll(final int illIIlllIIIIlllIIlIl) {
-        this.IllIIlllIIIIlllIIlIl = illIIlllIIIIlllIIlIl;
-        this.llllIIIlIlllIlIIIIIl = this.IllIIlllIIIIlllIIlIl / 127.5f;
+    public void llllIIIIlIIIlIlllIll(final int widthMiss) {
+        this.widthMiss = widthMiss;
+        this.heightMiss = this.widthMiss / 127.5f;
     }
     
     public int llIIlIIIlIIIllIlIIIl() {
-        return this.IllIIlllIIIIlllIIlIl;
+        return this.widthMiss;
     }
     
     public float llIllIlIIIIllIlIIllI() {
-        return this.llllIIIlIlllIlIIIIIl;
+        return this.heightMiss;
     }
     
     public boolean lIlIlIIIllIIllIIIllI() {
-        return this.lIIIIlIIIIIlllIllIII;
+        return this.toggled;
     }
     
-    public void IlIlIIIllIIllIlllllI() {
+    public void render() {
     }
     
-    public void llllIIIIlIIIlIlllIll(final int n, final int n2) {
+    public void renderDummy(final int n, final int n2) {
     }
 }

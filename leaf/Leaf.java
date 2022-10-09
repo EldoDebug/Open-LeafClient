@@ -13,7 +13,7 @@ import net.arikia.dev.drpc.*;
 public class Leaf
 {
     public static Leaf instance;
-    public ConfigManager saveConfig;
+    public ConfigManager configManager;
     public DownloadPlayerData downloadPlayerData;
     public ModManager modManager;
     private long lastCurrentTimeMillis;
@@ -23,7 +23,7 @@ public class Leaf
     }
     
     public void init() {
-        this.saveConfig = new ConfigManager();
+        this.configManager = new ConfigManager();
         this.downloadPlayerData = new DownloadPlayerData();
         this.modManager = new ModManager();
         LoadFont.loadFont();
